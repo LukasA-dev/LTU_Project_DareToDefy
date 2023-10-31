@@ -12,23 +12,17 @@ body {
 
 /*Background Img*/
 .background-img{
-    background-image: url("https://images.unsplash.com/photo-1534367507873-d2d7e24c797f?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
     background-repeat: no-repeat;
-    width:  100vw;
-    height: 100vh;
+    background-image: url("https://images.unsplash.com/photo-1534367507873-d2d7e24c797f?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+
 }
 
 
 
 /* Logo */
-.logo-container {
-    display: flex;
-    justify-content: center;
-}
-
 .logo-container img {
     height: auto;
-    width: 110px;
+    width: 100px;
 }
 
 header{
@@ -95,6 +89,7 @@ nav{
 .content-wrapper{
     display: flex;
     margin-top: auto;
+    height: 100vh;
 }
 
 
@@ -105,7 +100,6 @@ nav{
   animation: fade .5s ease-in both;
 
 
-  margin-left: auto;
   font-size: 3rem;
   text-shadow: 1px 1px 1px rgb(255, 255, 255);
 }
