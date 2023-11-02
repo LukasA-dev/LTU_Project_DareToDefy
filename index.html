@@ -5,29 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dare2Defy</title>
     <link rel="stylesheet" href="styles.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   </head>
   <body>
 
-    <div class="background-img">
       <header>
         <div class="logo-container">
           <a href="index.html">
-            <img src="Dare2DefyLogo.png" alt="Dare2Defy Logo" />
+            <img src="Dare2DefyLogo.png" alt="Dare2Defy Logo">
           </a>
         </div>
 
-        <!-- Desktop -->
+        <!-- Menu button -->
+        <input type="checkbox" id="check">
+        <label for="check" class="icons">
+          <i class="fa-sharp fa-solid fa-bars-staggered" id="menu-icon"></i>
+          <i class="fa-solid fa-xmark" id="close-icon"></i>
+        </label>
 
         <nav class="links" style="--items: 4">
-          <a href="Träning.html">Träning</a>
-          <a href="Kost.html">Kost</a>
-          <a href="Motivation.html">Motivation</a>
-          <a href="MentalHealthCorner.html">Mental Health Corner</a>
+          <a href="träning.html" style="--i:0;">Träning</a>
+          <a href="kost.html" style="--i:1;">Kost</a>
+          <a href="motivation.html" style="--i:2;">Motivation</a>
+          <a href="wellness.html" style="--i:3;">Wellness</a>
           <span class="line"></span>
         </nav>
       </header>
-      <!-- Mobile -->
 
       <div class="content-wrapper">
         <div class="brand">
@@ -35,7 +38,6 @@
           <h2>Break Limits | Rise above</h2>
         </div>
       </div>
-    </div>
     
     <footer>
       <div class="footer-wrapper">

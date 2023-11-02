@@ -1,47 +1,93 @@
 /* General Styles */
 body {
+	/*Font-styles*/
 	font-family: "Roboto", sans-serif;
 	font-size: 16px;
 	font-style: italic;
 	font-weight: bold;
+	color: #000000;
 
+	/*Positioning */
 	margin: 0;
 	padding: 0;
 	scroll-behavior: smooth;
 	overflow-x: hidden;
-    color: #000000
-}
 
-/*Background Img*/
-.background-img {
+	/*Background properties */
 	background-image: url("https://images.unsplash.com/photo-1574680178050-55c6a6a96e0a?auto=format&fit=crop&q=80&w=2069&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
 	background-position: top;
 	background-repeat: no-repeat;
 	background-size: cover;
 }
 
+/*Scrollbar Styles for Chrome*/
+::-webkit-scrollbar {
+    width: 12px; /* Adjust width of scrollbar */
+}
+
+::-webkit-scrollbar-track {
+    background-color: #000000; /* Color of the track */
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #ffffff; /* Color of the scroll thumb */
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background: linear-gradient(#e66465, #9198e5);}
+
+
 /* Logo */
 .logo-container img {
 	height: auto;
 	width: 120px;
+}
+
+/*Logo spin on hover*/
+.logo-container img:hover {
+	transform: rotate(360deg);
 	transition: transform 0.3s;
 }
 
-.logo-container img:hover {
-	transform: rotate(360deg);
-}
-
+/*Header */
 header {
-	position: relative;
+	position: sticky;
 	padding: 0 2rem;
 	display: flex;
-	background: linear-gradient(
-		24.1% 68.8%,
-		rgb(50, 50, 50) 0%,
-		rgb(0, 0, 0) 99.4%
-	);
+	top: 0;
+	left:0;
+	width: 100%;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+	z-index: 100;
+}
+header::before{
+	content: '';
+	position: absolute;
+	top:0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,.1);
+	backdrop-filter: blur(50px);
+	z-index: -1;
+}
+header::after{
+	content: '';
+	position: absolute;
+	top:0;
+	left: -100%;
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(90deg, transparent, rgba(255, 255, 255,.4), transparent);
+	transition: .5s;
+}
+header:hover::after{
+	left: 100%;
 }
 
+/*Navigation menu*/
 nav {
 	position: relative;
 	max-width: 1200px;
@@ -50,18 +96,33 @@ nav {
 	justify-content: space-between;
 }
 
+#check{
+	display: none;
+}
+
+.icons{
+	position: absolute;
+	right: 15%;
+	font-size: 3rem;
+	color: #000000;
+	cursor: pointer;
+	display: none;
+}
+
 .links {
 	display: grid;
 	grid-template-columns: repeat(var(--items), 1fr);
-	grid-template-rows: repeat(2, 1fr);
-	font-size: 1.5rem;
+	grid-template-rows: repeat(1, 1fr);
+	font-size: 1.2rem;
 }
 
 .links > a {
 	color: #000000;
-	padding: 0.75em;
-	text-align: center;
+	padding: 4rem 1rem;
 	transition: all 0.5s;
+	text-align: center;
+	text-decoration: none;
+	margin-left: 2.5rem;
 }
 
 .links > a:hover {
@@ -70,7 +131,7 @@ nav {
 		rgba(255, 255, 255, 0.384)
 	);
 }
-
+/*Underline for navigation links*/
 .links > .line {
 	background: #ffffff;
 	height: 1px;
@@ -78,46 +139,48 @@ nav {
 	opacity: 0;
 	transition: all 0.3s;
 	position: absolute;
-	bottom: 50%;
-	left: var(--left, calc(100% / var(--items) * (var(--index) - 1)));
-	width: var(--width, calc(100% / var(--items)));
+	bottom: 0;
+	left: var(--left, calc((100% / var(--items) * (var(--index) - 1)) + 2.5rem)); 
+    width: var(--width, calc((100% / var(--items)) - 2.5rem)); 
 	--index: 0;
 }
-
+/* Activates the line*/
 .links > a:hover ~ .line {
 	opacity: 1;
 }
 
+/* Updates the position of the line based on the hovered link */
+.links > .line {
+	left: var(--left, +2.5rem);
+}
 .links > a:nth-of-type(1):hover ~ .line {
-	--left: calc(100% / var(--items) * 0);
+    --left: calc((100% / var(--items) * 0) + 2.5rem); 
 }
 .links > a:nth-of-type(2):hover ~ .line {
-	--left: calc(100% / var(--items) * 1);
+    --left: calc((100% / var(--items) * 1) + 2.5rem); 
 }
 .links > a:nth-of-type(3):hover ~ .line {
-	--left: calc(100% / var(--items) * 2);
+    --left: calc((100% / var(--items) * 2) + 2.5rem); 
 }
 .links > a:nth-of-type(4):hover ~ .line {
-	--left: calc(100% / var(--items) * 3);
+    --left: calc((100% / var(--items) * 3) + 2.5rem); 
 }
 
-/* Update the position of the line based on the hovered link */
-.links > .line {
-	left: var(--left, 0);
-}
 
 /*Content wrapper*/
 .content-wrapper {
-	display: flex;
-	margin-top: auto;
 	height: 100vh;
+	position: relative;
+	margin-top: 0 auto;
 }
 
 /*Brand container*/
 .brand {
-	margin: 4rem;
-	height: fit-content;
-	width: fit-content;
+	padding: 4rem;
+	height: 21rem;
+	width: 60rem;
+	text-align: left;
+	margin: auto;
 
 	transform: skewX(-10deg);
 	font-size: 3rem;
@@ -129,7 +192,6 @@ nav {
 	-webkit-text-fill-color: transparent;
 	background-size: 200%;
 }
-
 .brand:after{
     content: '';
     position: absolute;
@@ -142,7 +204,6 @@ nav {
     transform-origin: bottom right;
     transition: transform 0.25s ease-out;
   }
-
 .brand:hover:after {
     transform: scaleX(1);
     transform-origin: bottom left;
@@ -225,14 +286,81 @@ footer {
 
 /*Mobil Enhet*/
 @media (max-width: 767px) {
-	header {
+	/*Header*/
+
+	.brand{
 		display: none;
 	}
+	.line{
 
-	.brand {
-		font-size: 2rem;
 	}
 
+	.icons{
+		display: inline-flex;
+	}
+	#check:checked ~.icons #menu-icon{
+		display:none;
+	}
+	.icons #close-icon{
+		display: none;
+	}
+	#check:checked ~.icons #close-icon{
+		display:block;
+	}
+
+	.links{
+		position: absolute;
+		top: 100%;
+		left: 0;
+		height: 0;
+		width: 100%;
+		background: rgba(0,0,0,.1);
+		backdrop-filter: blur(50px);
+		box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .3);
+		transition: .3s ease;
+		overflow: hidden;
+
+		display: flex;
+		flex-direction: column;
+		justify-content: space-evenly;
+	}
+	#check:checked ~.links{
+		height: 20rem;
+	}
+
+
+	.links > a {
+        margin-left: 0;
+		padding: 0.5rem 0;	
+		display: inline-block;
+		width: 210px;
+		height: 100%;
+		margin: auto;
+		line-height: 3rem;
+
+		transition: .3s ease;
+		opacity: 0;
+		transform: translateY(-50px);
+	}
+	#check:checked ~.links a{
+		transform: translateY(0);
+		opacity: 1;
+		transition-delay: calc(.15s * var(--i));
+	}
+
+
+	.links a:hover{
+		background-image: linear-gradient(
+			to left,
+			rgba(255, 255, 255, 0.25),
+			rgba(255, 255, 255, 0.7)
+		);
+		text-decoration: underline;
+	}
+
+	.line{
+		display: none;
+	}
 
 	.footer-wrapper {
 		display: flex;
@@ -261,7 +389,7 @@ footer {
 /*Väldigt liten enhet*/
 @media (max-width: 430px) {
 	.brand {
-		font-size: 0.8rem;
+		font-size: 1.6rem;
 	}
 
 	.footer-wrapper .socials,
@@ -290,5 +418,19 @@ footer {
     .footer-wrapper .footer-brand {
 		width: 300px;
         height: auto;
+	}
+}
+
+/*Breakpoints Brand text*/
+@media (max-width: 1002px) {
+	.brand{
+		font-size: 2.5rem;
+		height: 18rem;
+	}
+}
+@media (max-width: 860px) {
+	.brand{
+	font-size: 2.2rem;
+	height: 16rem;
 	}
 }
