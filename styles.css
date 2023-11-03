@@ -242,12 +242,11 @@ nav {
 /*footer*/
 footer {
     display: grid;
-    gap: 100px;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    grid-template-rows: 1fr;
-    padding: 4rem;
+	padding: 8rem;
+	gap: 200px;
+
     background: var(--clr-1);
-    text-align: left;
     z-index: 1;
     position: relative;
 }
@@ -258,12 +257,16 @@ footer {
 }
 
 .logo, .socials, .about, .location {
-
-	
+	text-align: center;
+	padding: 0 20px;
     position: relative;
     background: var(--clr-1);
 }
 
+.logo img{
+	height: auto;
+	width: 160px;
+}
   
  .card{
 	aspect-ratio: 1/1;
@@ -383,9 +386,49 @@ footer {
 		display: none;
 	}
 
-	.logo, .socials, .about, .location {
-        flex: 1 1 100%;
-        margin: 0.5rem 0;
-    }
+}
 
+/*BreakPoints footer*/
+@media only screen and (max-width: 915px) {
+	footer{
+		gap: 110px;
+	}
+}
+@media only screen and (max-width: 556px) {
+	footer{
+		padding: 4rem;
+	}
+}
+@media only screen and (max-width: 460px) {
+	body{
+		font-size: 14px;
+	}
+
+	footer{
+		padding: 1.3rem;
+	}
+	.card{
+		width: 200px;
+	}
+	
+}
+@media only screen and (max-width: 300px) {
+	body{
+		font-size: 12px;
+	}
+	.header{
+
+	}
+	.logo-container img{
+		width: 100px;
+	}
+	footer{
+		padding: 1rem;
+	}
+	.logo img{
+		width: 100px;
+	}
+	.card{
+		width: 150px;
+	}
 }
