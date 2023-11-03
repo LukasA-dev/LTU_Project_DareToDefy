@@ -8,46 +8,47 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   </head>
   <body>
-    <header>
-      <div class="logo-container">
-        <a href="index.html">
-          <img src="Dare2DefyLogo.png" alt="Dare2Defy Logo">
-        </a>
-      </div>
-        <!-- Menu button -->
-      <input type="checkbox" id="check">
-      <label for="check" class="icons">
-        <div class="icon-background">
-          <i class="fa-sharp fa-solid fa-bars-staggered" id="menu-icon"></i>
-          <i class="fa-solid fa-xmark" id="close-icon"></i>
+    <section class="background">
+      <header>
+        <div class="logo-container">
+          <a href="index.html">
+            <img src="Dare2DefyLogo.png" alt="Dare2Defy Logo">
+          </a>
         </div>
-      </label>
-      <nav class="links" style="--items: 4">
-        <a href="träning.html" style="--i:0;">Träning</a>
-        <a href="kost.html" style="--i:1;">Kost</a>
-        <a href="motivation.html" style="--i:2;">Motivation</a>
-        <a href="wellness.html" style="--i:3;">Wellness</a>
-        <span class="line"></span>
-      </nav>
-    </header>
+          <!-- Menu button -->
+        <input type="checkbox" id="check">
+        <label for="check" class="icons">
+          <div class="icon-background">
+            <i class="fa-sharp fa-solid fa-bars-staggered" id="menu-icon"></i>
+            <i class="fa-solid fa-xmark" id="close-icon"></i>
+          </div>
+        </label>
+        <nav class="links" style="--items: 4">
+          <a href="träning.html" style="--i:0;">Träning</a>
+          <a href="kost.html" style="--i:1;">Kost</a>
+          <a href="motivation.html" style="--i:2;">Motivation</a>
+          <a href="wellness.html" style="--i:3;">Wellness</a>
+          <span class="line"></span>
+        </nav>
+      </header>
 
-    <!-- Main content -->
-    <div class="content-wrapper">
-      <div class="brand">
-        <h1>Dare2Defy</h1>
-        <h2>Break Limits | Rise above</h2>
+      <!-- Main content -->
+      <div class="content-wrapper">
+        <div class="brand">
+          <h1>Dare2Defy</h1>
+          <h2>Break Limits | Rise above</h2>
+        </div>
       </div>
-    </div>
-
+    </section>
+<!-- To be used
+<div class="card"></div> -->
 
    <footer>
-    <div class="footer-wrapper">
-      <div class="card">
-        <div class="card footerbrand">
-          <img class="footer-logo" src="Dare2DefyLogo.png" alt="Dare2Defy Logo" />
+    <div class="logo card footer-item">
+      <img src="Dare2DefyLogo.png" alt="Dare2Defy Logo">
             <h2>Break Limits | Rise Above</h2>
         </div>
-        <div class="card socials">
+        <div class="socials card footer-item">
           <h1>Socials</h1>
           <ul>
             <li><a href="#"> <i class="fab fa-instagram"></i>Instagram</a></li>
@@ -56,7 +57,7 @@
             <li><a href="#"> <i class="fab fa-linkedin"></i>LinkedIn</a></li>
           </ul>
         </div>
-        <div class="card about">
+        <div class="about card footer-item">
           <h1>Om oss</h1>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt
@@ -65,11 +66,10 @@
             Consequatur, voluptatem nulla?
           </p>
         </div>
-        <div class="card location">
+        <div class="location card footer-item">
           <h1>Adress</h1>
           <p>Drottninggatan <br> Stockholm, 11151 <br> daretodefy@email.com</p>
         </div>
-      </div>
     </footer>
   </body>
 </html>

@@ -1,3 +1,24 @@
+@property --gradient-angle{
+	syntax: "<angle>";
+	initial-value: 0deg;
+	inherits: false;
+}
+
+
+
+:root{
+	--clr-1:rgb(27, 27, 27);
+	--clr-2:#008844;
+	--clr-3:#2da89e;
+	--clr-4:#7a99ff;
+	--clr-5:#4e62a3;
+	--clr-6:#20726b;
+}
+
+*{
+	box-sizing: border-box;
+}
+
 /* General Styles */
 body {
 	/*Font-styles*/
@@ -5,15 +26,17 @@ body {
 	font-size: 16px;
 	font-style: italic;
 	font-weight: bold;
-	color: #000000;
+	color: #ffffff;
 
 	/*Positioning */
 	margin: 0;
 	padding: 0;
 	scroll-behavior: smooth;
 	overflow-x: hidden;
+}
 
-	/*Background properties */
+/*Background properties */
+.background{
 	background-image: url("https://images.unsplash.com/photo-1574680178050-55c6a6a96e0a?auto=format&fit=crop&q=80&w=2069&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
 	background-position: top;
 	background-repeat: no-repeat;
@@ -30,11 +53,11 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-	background-color: #ffffff; /* Color of the scroll thumb */
+	background: linear-gradient(var(--clr-3), var(--clr-4));
 }
 
 ::-webkit-scrollbar-thumb:hover {
-	background: linear-gradient(#e66465, #9198e5);
+	background: linear-gradient(var(--clr-6), var(--clr-5));
 }
 
 /* Logo */
@@ -73,24 +96,8 @@ header::before {
 	backdrop-filter: blur(50px);
 	z-index: -1;
 }
-header::after {
-	content: "";
-	position: absolute;
-	top: 0;
-	left: -100%;
-	width: 100%;
-	height: 100%;
-	background: linear-gradient(
-		90deg,
-		transparent,
-		rgba(255, 255, 255, 0.4),
-		transparent
-	);
-	transition: 0.5s;
-}
-header:hover::after {
-	left: 100%;
-}
+
+
 
 /*Navigation menu*/
 nav {
@@ -122,7 +129,7 @@ nav {
 }
 
 .links > a {
-	color: #000000;
+	color: #d6d6d6;
 	padding: 4rem 1rem;
 	transition: all 0.5s;
 	text-align: center;
@@ -135,11 +142,12 @@ nav {
 		rgba(0, 0, 0, 0),
 		rgba(255, 255, 255, 0.384)
 	);
+	color: #000000;
 }
 /*Underline for navigation links*/
 .links > .line {
-	background: #ffffff;
-	height: 1px;
+	background: linear-gradient(to left, var(--clr-3), var(--clr-4));
+	height: 2px;
 	pointer-events: none;
 	opacity: 0;
 	transition: all 0.3s;
@@ -176,22 +184,23 @@ nav {
 	height: 100vh;
 	position: relative;
 	margin-top: 0 auto;
+
+	display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /*Brand container*/
 .brand {
-	padding: 4rem;
-	height: 21rem;
-	width: 60rem;
-	text-align: left;
-	margin: auto;
+	margin: 10px 50px;
 
-	transform: skewX(-10deg);
-	font-size: 3rem;
+ 	transform: skewX(-10deg);
+ 	font-size: 3rem;
+	color: #ffffff;
 }
 .brand:hover {
-	animation: background-pan 0.8s linear infinite;
-	background: linear-gradient(to right, #000000, #ffffff, #000000);
+	animation: background-pan 1.5s linear infinite;
+	background: linear-gradient(to right, var(--clr-3), var(--clr-4), var(--clr-3));
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 	background-size: 200%;
@@ -232,30 +241,75 @@ nav {
 
 /*footer*/
 footer {
-	background-color: #171717;
-	height: 100%;
-	margin-top: auto;
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-template-rows: 1fr;
+    padding: 4rem;
+    background: var(--clr-1);
+    text-align: left;
+    z-index: 1;
+    position: relative;
+}
+.footer-item {
+    display: inline-block;
+    text-align: center;
+    transition: all 0.3s linear;
 }
 
-.footer-wrapper {
-	display: grid;
-	grid-template-columns: repeat(5, 1fr);
-	margin: 0 20px;
+.logo, .socials, .about, .location {
+
+	
+    position: relative;
+    background: var(--clr-1);
+}
+
+  
+ .card{
+	aspect-ratio: 1/1;
+	width: auto;
+	height: 300px;
+
+	background: var(--clr-1);
+	border-radius: .5rem;
+	position: relative;
+}
+.card::before,
+.card::after {
+	content: '';
+	position: absolute;
+	inset: -1rem;
+	background: conic-gradient(
+		from var(--gradient-angle),
+		var(--clr-3),
+		var(--clr-4),
+		var(--clr-3),
+		var(--clr-4));
+	border-radius: inherit;
+	animation: rotation 20s linear infinite;
+	z-index: -1;
+}
+.card::after{
+	filter: blur(1.5rem);
+} 
+
+@keyframes rotation{
+	0%{ --gradient-angle: 0deg; }
+	100%{ --gradient-angle: 360deg; }
 }
 
 .socials ul {
 	list-style: none;
-	text-align: center;
 	padding: 0;
 	margin: 0;
 }
 
 .socials a {
-	color: rgb(0, 0, 0);
+	color: rgb(255, 255, 255);
 }
 
 .socials ul li :hover {
-	color: rgb(255, 255, 255);
+	color: rgba(255, 255, 255, 0.76);
 }
 
 /*Mobil Enhet*/
@@ -329,43 +383,9 @@ footer {
 		display: none;
 	}
 
-	.footer-wrapper {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-	}
-	.footer-wrapper .footer-logo {
-		height: auto;
-		width: 150px;
-	}
-	.footer-wrapper h2 {
-		font-size: 1.2rem;
-	}
-}
-/*Väldigt liten enhet*/
-@media (max-width: 430px) {
-	.brand {
-		font-size: 1.6rem;
-	}
-}
+	.logo, .socials, .about, .location {
+        flex: 1 1 100%;
+        margin: 0.5rem 0;
+    }
 
-/* Desktop view*/
-@media (min-width: 768px) {
-	.footer-wrapper {
-		flex-direction: row;
-	}
-}
-
-/*Breakpoints Brand text*/
-@media (max-width: 1002px) {
-	.brand {
-		font-size: 2.5rem;
-		height: 18rem;
-	}
-}
-@media (max-width: 860px) {
-	.brand {
-		font-size: 2.2rem;
-		height: 16rem;
-	}
 }
