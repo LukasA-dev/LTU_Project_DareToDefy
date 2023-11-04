@@ -45,11 +45,11 @@ body {
 
 /*Scrollbar Styles for Chrome*/
 ::-webkit-scrollbar {
-	width: 12px; /* Adjust width of scrollbar */
+	width: 12px;
 }
 
 ::-webkit-scrollbar-track {
-	background-color: #000000; /* Color of the track */
+	background-color: #000000;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -116,9 +116,12 @@ nav {
 	position: absolute;
 	right: 15%;
 	font-size: 3rem;
-	color: #000000;
+	color: #ffffff;
 	cursor: pointer;
 	display: none;
+}
+.icons:hover{
+	font-size: 3.2rem;
 }
 
 .links {
@@ -142,11 +145,10 @@ nav {
 		rgba(0, 0, 0, 0),
 		rgba(255, 255, 255, 0.384)
 	);
-	color: #000000;
 }
 /*Underline for navigation links*/
 .links > .line {
-	background: linear-gradient(to left, var(--clr-3), var(--clr-4));
+	background: #ffffff;
 	height: 2px;
 	pointer-events: none;
 	opacity: 0;
@@ -281,7 +283,7 @@ footer {
 .card::after {
 	content: '';
 	position: absolute;
-	inset: -1rem;
+	inset: -10px;
 	background: conic-gradient(
 		from var(--gradient-angle),
 		var(--clr-3),
@@ -289,7 +291,7 @@ footer {
 		var(--clr-3),
 		var(--clr-4));
 	border-radius: inherit;
-	animation: rotation 20s linear infinite;
+	animation: rotation 4s linear infinite;
 	z-index: -1;
 }
 .card::after{
@@ -361,7 +363,7 @@ footer {
 		width: 210px;
 		height: 100%;
 		margin: auto;
-		line-height: 3rem;
+		line-height: 4rem;
 
 		transition: 0.3s ease;
 		opacity: 0;
