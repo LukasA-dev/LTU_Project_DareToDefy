@@ -7,8 +7,8 @@
 
 
 :root{
-	--clr-1:rgb(27, 27, 27);
-	--clr-2:#008844;
+	--clr-1:#1b1b1b;
+	--clr-2:#F652A0;
 	--clr-3:#2da89e;
 	--clr-4:#7a99ff;
 	--clr-5:#4e62a3;
@@ -34,6 +34,7 @@ body {
 	scroll-behavior: smooth;
 	overflow-x: hidden;
 }
+
 
 /*Background properties */
 .background{
@@ -192,7 +193,21 @@ nav {
     align-items: center;
 	flex-wrap: wrap;
 }
+
 /* Box content */
+.boxWrapper {
+	opacity: 0.99;	
+	display: flex;
+    justify-content: center;
+    align-items: center;
+	flex-wrap: wrap;
+}
+.boxWrapper a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
 .box{
 	position: relative;
 	width: 300px;
@@ -202,6 +217,7 @@ nav {
 	align-items: center;
 	margin: 40px;
 	transition: .5s;
+	background: var(--clr-1);
 }
 .box:hover{
 	height: 400px;
@@ -219,7 +235,6 @@ nav {
 	max-width: 100%;
 	opacity: 0.1;
 	transition: .5s;
-	aspect-ratio: 1/1;
 }
 .box:hover .imgBox img{
 	opacity: 1;
@@ -231,8 +246,8 @@ nav {
 	left: -2px;
 	right: -2px;
 	bottom: -2px;
-	background: #000000;
-	z-index: 1;
+	background: #ffffff;
+	z-index: -1;
 }
 .box:after{
 	content: '';
@@ -241,9 +256,47 @@ nav {
 	left: -2px;
 	right: -2px;
 	bottom: -2px;
-	background: #000000;
-	z-index: -2;
+	background: #ffffff;
 	filter: blur(40px);
+	z-index: -2;
+}
+.box:before,
+.box:after{
+	background: conic-gradient(
+	from var(--gradient-angle),
+	 var(--clr-3),
+	 var(--clr-4),
+	 var(--clr-2));
+	 animation: rotation 5s linear infinite;
+}
+
+.box .box-content{
+	position: absolute;
+	bottom: 0;
+	left: 10px;
+	right: 10px;
+	bottom: 10px;
+	height: 90px;
+	background: rgba(0, 0, 0, 0.4);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	opacity: 0;
+	transition: .5s;
+}
+.box:hover .box-content{
+	opacity: 1;
+}
+.box .box-content h2{
+	font-size: 20px;
+	line-height: 20px;
+	letter-spacing: 1px;
+}
+.box .box-content h2 span{
+	font-size: 14px;
+	line-height: 20px;
+	letter-spacing: 3px;
 }
 
 
@@ -450,12 +503,40 @@ footer {
 		display: none;
 	}
 }
-@media only screen and (max-width: 350px) {
+@media only screen and (max-width: 400px) {
 	body{
 		font-size: 14px;
 	}
+	.content-wrapper{
+		border: #000000 solid 2px;
+		margin: 0;
+		padding: 0;
+	}
+	.box{
+		width: 200px;
+		height: 200px;
+		margin: 10px;
+	}
+	.box:hover{
+		height: 270px;
+	}
+	.box .box-content{
+		height: 60px;
+	}
+	.box .box-content h2{
+		font-size: 16px;
+		line-height: 10px;
+		letter-spacing: 1px;
+	}
+	.box .box-content h2 span{
+		font-size: 12px;
+		line-height: 20px;
+		letter-spacing: 2px;
+	}
+
+
     .footer-item {
-        flex: 1 1 100%;  /* This will ensure that all items take the full width below 315px */
+        flex: 1 1 100%;  
     }
 	.card{
 		width: 220px;
