@@ -265,8 +265,8 @@ nav {
 	background: conic-gradient(
 	from var(--gradient-angle),
 	 var(--clr-3),
-	 var(--clr-4),
-	 var(--clr-2));
+	 var(--clr-4)
+);
 	 animation: rotation 5s linear infinite;
 }
 
@@ -298,6 +298,103 @@ nav {
 	line-height: 20px;
 	letter-spacing: 3px;
 }
+
+/* Motivational quotes carousel */
+.carousel {
+	width: 100vw;
+	height: 100vh;
+	position: relative;
+  }
+  .slide {
+	display: flex;
+	position: absolute;
+	inset: 0;
+	opacity: 0;
+	transition: 100ms opacity ease-in-out;
+	transition-delay: 100ms;
+
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+  }
+
+  .quote-text{
+	position: absolute;
+	background-color: #1b1b1bcc;
+	width: 100%;
+	max-width: 1200px;
+  }
+
+  .quote-text span{
+	animation: background-pan 1s linear infinite;
+	background: linear-gradient(to right, var(--clr-3), var(--clr-4), var(--clr-3));
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-size: 200%;
+  }
+
+  
+  .slide h1{
+	font-size:  3rem;
+	padding: 0 10rem;
+  }
+  .slide h2{
+	font-size:  2rem;
+	padding: 0 10rem;
+  }
+
+ 
+  .slide img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: center;
+  }
+  
+  .slide[data-active] {
+	opacity: 1;
+	z-index: 1;
+	transition-delay: 0s;
+  }
+
+  .carousel  ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+  }
+  
+  .carousel-button {
+	border: none;
+	color: #ffffff;
+	position: absolute;
+	background: none;
+	font-size: 3rem;
+	top: 50%;
+	transform: translateY(-50%);
+	border-radius: .5rem;
+	z-index: 2;
+  }
+  
+  .carousel-button:hover,
+  .carousel-button:focus {
+	animation: background-pan .6s linear infinite;
+	background: linear-gradient(to right, var(--clr-3), var(--clr-4), var(--clr-3));
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-size: 200%;
+	cursor: pointer;
+
+
+  }
+  
+  .carousel-button.prev {
+	left: 5%;
+  }
+  
+  .carousel-button.next {
+	right: 5%;
+  }
+
 
 
 /*Brand container*/
@@ -420,6 +517,7 @@ footer {
 
 .socials ul {
 	list-style: none;
+	line-height: 30px;
 	padding: 0;
 	margin: 0;
 }
@@ -429,15 +527,15 @@ footer {
 }
 
 .socials ul li :hover {
-	color: rgba(255, 255, 255, 0.76);
+	color: rgba(255, 255, 255, 0.5);
+}
+.location{
+	line-height: 40px;
 }
 
 /*Mobil Enhet*/
 @media (max-width: 767px) {
 	/*Header*/
-	.brand {
-		display: none;
-	}
 	.icons {
 		display: inline-flex;
 	}
@@ -502,13 +600,21 @@ footer {
 	.line {
 		display: none;
 	}
+
+	.slide h1{
+		font-size:  2rem;
+		padding: 0 5rem;
+	  }
+	  .slide h2{
+		font-size:  1rem;
+		padding: 0 5rem;
+	  }
 }
 @media only screen and (max-width: 400px) {
 	body{
 		font-size: 14px;
 	}
 	.content-wrapper{
-		border: #000000 solid 2px;
 		margin: 0;
 		padding: 0;
 	}
