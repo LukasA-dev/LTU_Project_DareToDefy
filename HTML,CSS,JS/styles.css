@@ -210,12 +210,15 @@ nav {
 }
 .content-wrapper .pageHeader{
 	font-size: 6rem;
-	align-self: center;
+	align-self: flex-start;
 	text-align: center;
 	width: 45%;
 	background: #1b1b1bda;
-	transform: skew(-5deg);
+	margin-top: 40px;
+	position: relative; 
+	border-radius: 10px;
 }
+
 
 .content-wrapper .pageHeader:after {
 	content: "";
@@ -224,6 +227,7 @@ nav {
 	transform: scaleX(0);
 	height: 2px;
 	left: 0;
+	bottom: 0;
 	background-color: #ffffff;
 	transform-origin: bottom right;
 	transition: transform 0.25s ease-out;
@@ -240,6 +244,7 @@ nav {
     justify-content: center;
     align-items: center;
 	flex-wrap: wrap;
+	align-self: flex-start;
 }
 .boxWrapper a {
     text-decoration: none;
@@ -375,6 +380,7 @@ nav {
 	background-color: #1b1b1bcc;
 	width: 100%;
 	max-width: 1200px;
+	border-radius: 10px;
   }
 
   .quote-text span{
