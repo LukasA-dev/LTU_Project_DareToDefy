@@ -200,7 +200,7 @@ nav {
 
 /*Content wrapper*/
 .content-wrapper {
-	min-height: 120vh;
+	min-height: 100vh;
 	position: relative;
 
 	display: flex;
@@ -213,7 +213,7 @@ nav {
 	align-self: center;
 	text-align: center;
 	width: 45%;
-	background: #1b1b1b;
+	background: #1b1b1bda;
 	transform: skew(-5deg);
 }
 
@@ -358,13 +358,13 @@ nav {
 	position: relative;
   }
   .slide {
-	display: flex;
 	position: absolute;
 	inset: 0;
 	opacity: 0;
 	transition: 100ms opacity ease-in-out;
 	transition-delay: 100ms;
 
+	display: flex;
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
