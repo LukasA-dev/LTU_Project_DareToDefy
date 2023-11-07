@@ -131,6 +131,7 @@ nav {
 	color: #ffffff;
 	cursor: pointer;
 	display: none;
+	padding: 8px;
 }
 .icons:hover {
 	font-size: 3.2rem;
@@ -207,7 +208,7 @@ nav {
 	font-size: 6rem;
 	align-self: flex-start;
 	text-align: center;
-	width: 45%;
+	min-width: 1000px;
 	background: #1b1b1bda;
 	margin-top: 40px;
 	position: relative;
@@ -626,6 +627,8 @@ footer {
 	line-height: 30px;
 	padding: 0;
 	margin: 0;
+
+	text-align: center;
 }
 
 .socials a {
