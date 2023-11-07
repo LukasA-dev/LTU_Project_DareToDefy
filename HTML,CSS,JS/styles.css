@@ -14,6 +14,9 @@
 	--clr-5:#4e62a3;
 	--clr-6:#20726b;
 }
+html{
+	background: #1b1b1b;
+}
 
 *{
 	box-sizing: border-box;
@@ -37,13 +40,26 @@ body {
 
 
 /*Background properties */
-.background{
-	background-image: url("https://images.unsplash.com/photo-1574680178050-55c6a6a96e0a?auto=format&fit=crop&q=80&w=2069&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+.background {
 	background-position: top;
 	background-repeat: no-repeat;
 	background-size: cover;
 }
 
+.background-general {
+	background-image: url("https://images.unsplash.com/photo-1574680178050-55c6a6a96e0a?auto=format&fit=crop&q=80&w=2069&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+}
+
+.background-training {
+	background-image: url("https://images.unsplash.com/photo-1541534741688-6078c6bfb5c5?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90oy1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+}
+
+.background-nutrition {
+	background-image: url("/images/nutritionbg.jpg");
+}
+.background-wellness{
+	background-image: url("/images/wellness.jpg")
+}
 /*Scrollbar Styles for Chrome*/
 ::-webkit-scrollbar {
 	width: 12px;
@@ -93,7 +109,7 @@ header::before {
 	left: 0;
 	width: 100%;
 	height: 100%;
-	background: rgba(0, 0, 0, 0.1);
+	background: rgba(0, 0, 0, 0.3);
 	backdrop-filter: blur(50px);
 	z-index: -1;
 }
@@ -184,14 +200,37 @@ nav {
 
 /*Content wrapper*/
 .content-wrapper {
-	min-height: 100vh;
+	min-height: 120vh;
 	position: relative;
-	margin-top: 0 auto;
 
 	display: flex;
     justify-content: center;
     align-items: center;
 	flex-wrap: wrap;
+}
+.content-wrapper .pageHeader{
+	font-size: 6rem;
+	align-self: center;
+	text-align: center;
+	width: 45%;
+	background: #1b1b1b;
+	transform: skew(-5deg);
+}
+
+.content-wrapper .pageHeader:after {
+	content: "";
+	position: absolute;
+	width: 100%;
+	transform: scaleX(0);
+	height: 2px;
+	left: 0;
+	background-color: #ffffff;
+	transform-origin: bottom right;
+	transition: transform 0.25s ease-out;
+}
+.content-wrapper h1:hover:after {
+	transform: scaleX(1);
+	transform-origin: bottom left;
 }
 
 /* Box content */
@@ -231,6 +270,16 @@ nav {
 	height: 100%;
 	padding: 10px;
 }
+.box .imgBox i {
+	font-style: normal;
+	position: absolute;
+	font-size: 5rem;
+	position: absolute;
+	font-size: 5rem;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
 .box .imgBox img{
 	max-width: 100%;
 	opacity: 0.1;
@@ -238,6 +287,9 @@ nav {
 }
 .box:hover .imgBox img{
 	opacity: 1;
+}
+.box:hover .imgBox i{
+	display: none;
 }
 .box:before{
 	content: '';
@@ -400,18 +452,14 @@ nav {
 /*Brand container*/
 .brand {
 	margin: 10px 50px;
+	padding: 10px;
 
  	transform: skewX(-10deg);
  	font-size: 3rem;
 	color: #ffffff;
+	background: #1b1b1b;
 }
-.brand:hover {
-	animation: background-pan 1.5s linear infinite;
-	background: linear-gradient(to right, var(--clr-3), var(--clr-4), var(--clr-3));
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
-	background-size: 200%;
-}
+
 .brand:after {
 	content: "";
 	position: absolute;
@@ -428,6 +476,10 @@ nav {
 	transform: scaleX(1);
 	transform-origin: bottom left;
 }
+.brand h1{
+	background: none;
+}
+
 @keyframes background-pan {
 	from {
 		background-position: 200% center;
@@ -452,7 +504,7 @@ footer {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    padding: 8rem;
+    padding: 2rem;
     background: var(--clr-1);
     z-index: 1;
     position: relative;
@@ -599,6 +651,10 @@ footer {
 
 	.line {
 		display: none;
+	}
+
+	.content-wrapper h1{
+		font-size: 4rem;
 	}
 
 	.slide h1{
