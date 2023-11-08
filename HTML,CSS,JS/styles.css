@@ -642,10 +642,13 @@ footer {
 	line-height: 40px;
 }
 
-/*Mobil Enhet*/
+/*Styles för Mobil/Smalare Enhet*/
 @media (max-width: 767px) {
 	.background {
 		background-image: url("https://images.unsplash.com/photo-1595078475328-1ab05d0a6a0e?q=80&w=2000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+	}
+	.background-wellness {
+		background-image: url("/images/wellness.jpg");
 	}
 	/*Header*/
 	.icons {
@@ -731,12 +734,18 @@ footer {
 		font-size: 2.5rem;
 	}
 }
+/* Styles för väldigt smala enheter*/
 @media only screen and (max-width: 400px) {
 	body {
 		font-size: 14px;
 	}
+	/* För att inte förstöra bakgrundsbilden används en färg istället*/
 	.background {
 		background: #1b1b1b;
+	}
+	/* På wellness-sidan vill jag behålla den varma känslan, därför används en gradient med samma varma färger*/
+	.background-wellness {
+		background: linear-gradient(60deg,#ffb84d, rgb(98, 183, 223));
 	}
 	.content-wrapper {
 		margin: 0;
