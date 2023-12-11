@@ -261,12 +261,6 @@ nav {
 	width: 80%; /* Responsiv bredd */
 	padding: 20px;
 	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Skugga */
-
-	/* Responsiva stilar vid smalare skärmar */
-	@media (max-width: 1000px) {
-		width: 90%; /* Bredd */
-		padding: 10px; /* Padding */
-	}
 }
 
 /* Stilar för boxar inuti boxWrapper */
