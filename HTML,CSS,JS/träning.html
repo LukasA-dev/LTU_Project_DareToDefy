@@ -1,88 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Dare2Defy</title>
-		<link rel="icon" type="image/x-icon" href="/images/Dare2DefyLogo.ico" />
-		<link rel="stylesheet" href="styles.css" />
-		<link
-			rel="stylesheet"
-			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
-			integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
-			crossorigin="anonymous"
-			referrerpolicy="no-referrer"
-		/>
-	</head>
-	<body>
-		<section class="background background-training">
-			<header>
-				<div class="logo-container">
-					<a href="index.html">
-						<img src="../images/Dare2DefyLogo.png" alt="Dare2Defy Logo" />
-					</a>
-				</div>
-				<!-- Menu button -->
-				<input type="checkbox" id="check" />
-				<label for="check" class="icons">
-					<div class="icon-background">
-						<i class="fa-sharp fa-solid fa-bars-staggered" id="menu-icon"></i>
-						<i class="fa-solid fa-xmark" id="close-icon"></i>
-					</div>
-				</label>
-				<nav class="links" style="--items: 4">
-					<a href="träning.html" style="--i: 0">Träning</a>
-					<a href="kost.html" style="--i: 1">Kost</a>
-					<a href="motivation.html" style="--i: 2">Motivation</a>
-					<a href="wellness.html" style="--i: 3">Wellness</a>
-					<span class="line"></span>
-				</nav>
-			</header>
+    <!-- Huvudstrukturen för Träningssidan -->
+    <head>
+        <!-- Metainformation för webbsidan -->
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Dare2Defy</title>
+        <!-- Länk till favicon och stilmallar -->
+        <link rel="icon" type="image/x-icon" href="/images/Dare2DefyLogo.ico" />
+        <link rel="stylesheet" href="styles.css" />
+        <!-- Länk till Font Awesome för ikoner -->
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+            integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+    </head>
+    <body>
+        <!-- Huvudsektion med bakgrund och header -->
+        <section class="background background-training">
+            <header>
+                <!-- Logo-container och navigationsmeny -->
+                <div class="logo-container">
+                    <a href="index.html">
+                        <img src="../images/Dare2DefyLogo.png" alt="Dare2Defy Logo" />
+                    </a>
+                </div>
+                <!-- Menyknapp för mobilanpassad navigering -->
+                <input type="checkbox" id="check" />
+                <label for="check" class="icons">
+                    <div class="icon-background">
+                        <i class="fa-sharp fa-solid fa-bars-staggered" id="menu-icon"></i>
+                        <i class="fa-solid fa-xmark" id="close-icon"></i>
+                    </div>
+                </label>
+                <!-- Navigationslänkar -->
+                <nav class="links" style="--items: 4">
+                    <a href="träning.html" style="--i: 0">Träning</a>
+                    <a href="kost.html" style="--i: 1">Kost</a>
+                    <a href="motivation.html" style="--i: 2">Motivation</a>
+                    <a href="wellness.html" style="--i: 3">Wellness</a>
+                    <span class="line"></span>
+                </nav>
+            </header>
 
-			<!-- Main content -->
-			<div class="content-wrapper">
-				<h1 class="pageHeader">Träning</h1>
-				<div class="boxWrapper">
-					<div class="box tab" data-panel="panel-squats">
-						<div class="imgBox">
-							<i>🦵</i>
-							<img src="../images/squats.jpg" />
-						</div>
-						<div class="box-content">
-							<h2>Knäböj<br /><span>Ben</span></h2>
-						</div>
-					</div>
-					<div class="box tab" data-panel="panel-benchpress">
-						<div class="imgBox">
-							<i>🏆</i>
-							<img src="../images/benchpress.jpg" />
-						</div>
-						<div class="box-content">
-							<h2>Bänkpress<br /><span>Bröst</span></h2>
-						</div>
-					</div>
-					<div class="box tab" data-panel="panel-deadlift">
-						<div class="imgBox">
-							<i>🏋️‍♀️</i>
-							<img src="../images/deadlift.jpg" />
-						</div>
-						<div class="box-content">
-							<h2>Marklyft<br /><span>Rygg</span></h2>
-						</div>
-					</div>
-					<div class="box tab" data-panel="panel-running">
-						<div class="imgBox">
-							<i>👟</i>
-							<img src="/images/runner.jpg" />
-						</div>
-						<div class="box-content">
-							<h2>Löpning<br /><span>Kondition</span></h2>
-						</div>
-					</div>
+            <!-- Huvudinnehåll för Träningssidan -->
+            <div class="content-wrapper">
+                <h1 class="pageHeader">Träning</h1>
+                <!-- Boxar för olika träningsövningar -->
+                <div class="boxWrapper">
+                    <!-- Box för Knäböj -->
+                    <div class="box tab" data-panel="panel-squats">
+                        <div class="imgBox">
+                            <i>🦵</i>
+                            <img src="../images/squats.jpg" />
+                        </div>
+                        <div class="box-content">
+                            <h2>Knäböj<br /><span>Ben</span></h2>
+                        </div>
+                    </div>
+                    <!-- Box för Bänkpress -->
+                    <div class="box tab" data-panel="panel-benchpress">
+                        <div class="imgBox">
+                            <i>🏆</i>
+                            <img src="../images/benchpress.jpg" />
+                        </div>
+                        <div class="box-content">
+                            <h2>Bänkpress<br /><span>Bröst</span></h2>
+                        </div>
+                    </div>
+                    <!-- Box för Marklyft -->
+                    <div class="box tab" data-panel="panel-deadlift">
+                        <div class="imgBox">
+                            <i>🏋️‍♀️</i>
+                            <img src="../images/deadlift.jpg" />
+                        </div>
+                        <div class="box-content">
+                            <h2>Marklyft<br /><span>Rygg</span></h2>
+                        </div>
+                    </div>
+                    <!-- Box för Löpning -->
+                    <div class="box tab" data-panel="panel-running">
+                        <div class="imgBox">
+                            <i>👟</i>
+                            <img src="/images/runner.jpg" />
+                        </div>
+                        <div class="box-content">
+                            <h2>Löpning<br /><span>Kondition</span></h2>
+                        </div>
+                    </div>
+					<!-- Paneler för detaljerad information om varje övning -->
 					<div class="tabs__panels">
 						<div id="panel-squats" class="panel">
 							<div class="panel-container">
 								<h1>Knäböj (Squats)</h1>
+								<!-- Beskrivning för Knäböj -->
 								<p>
 									<u>Beskrivning:</u><br />
 									Squats är en grundläggande övning som primärt tränar både
@@ -101,6 +115,7 @@
 						<div id="panel-benchpress" class="panel">
 							<div class="panel-container">
 								<h1>Bänkpress (Bench Press)</h1>
+								<!-- Beskrivning för Bänkpress -->
 								<p>
 									<u>Beskrivning:</u><br />
 									Bänkpress är en populär övning för att bygga styrka i bröstet,
@@ -117,6 +132,7 @@
 						<div id="panel-deadlift" class="panel">
 							<div class="panel-container">
 								<h1>Marklyft (Deadlifts)</h1>
+								<!-- Beskrivning för marklyft -->
 								<p>
 									<u>Beskrivning:</u><br />
 									Marklyft är en effektiv övning för att bygga styrka i ryggen,
@@ -134,6 +150,7 @@
 						<div id="panel-running" class="panel">
 							<div class="panel-container">
 								<h1>Löpning</h1>
+								<!-- Beskrivning för löpning -->
 								<p>
 									<u>Beskrivning:</u><br />
 									Löpning är en grundläggande konditionsövning som förbättrar
@@ -151,47 +168,41 @@
 			</div>
 		</section>
 
-		<footer>
-			<div class="logo card footer-item">
-				<img src="../images/Dare2DefyLogo.png" alt="Dare2Defy Logo" />
-				<h2>Break Limits | Rise Above</h2>
-			</div>
-			<div class="socials card footer-item">
-				<h1>Socials</h1>
-				<ul>
-					<li>
-						<a href="#"> <i class="fab fa-instagram"></i>Instagram</a>
-					</li>
-					<li>
-						<a href="#"> <i class="fab fa-twitter"></i>Twitter</a>
-					</li>
-					<li>
-						<a href="#"> <i class="fab fa-facebook"></i>Facebook</a>
-					</li>
-					<li>
-						<a href="#"> <i class="fab fa-linkedin"></i>LinkedIn</a>
-					</li>
-				</ul>
-			</div>
-			<div class="about card footer-item">
-				<h1>Om oss</h1>
-				<p>
-					Dare2Defy är en plattform skapad för att utmana och hjälpa atleter i
-					deras resa att ta nästa steget inom fysisk och mentalhälsa. Här
-					sammanställs expertis inom träning, kost och psykisk hälsa för att
-					inspirera och vägleda individer mot att bryta gränser och nå nya
-					höjder i sin atletiska och personliga utveckling.
-				</p>
-			</div>
-			<div class="location card footer-item">
-				<h1>Adress</h1>
-				<p>
-					Drottninggatan <br />
-					Stockholm, 11151 <br />
-					daretodefy@email.com
-				</p>
-			</div>
-		</footer>
-		<script src="tabs.js"></script>
+    <!-- Sidfotssektion -->
+    <footer>
+		<!-- Logo och varumärkestext -->
+		<div class="logo card footer-item">
+		  <img src="../images/Dare2DefyLogo.png" alt="Dare2Defy Logo">
+		  <h2>Break Limits | Rise Above</h2>
+		</div>
+		<!-- Sociala medier länkar -->
+		<div class="socials card footer-item">
+		  <h1>Socials</h1>
+		  <ul>
+			<li><a href="#"> <i class="fab fa-instagram"></i>Instagram</a></li>
+			<li><a href="#"> <i class="fab fa-twitter"></i>Twitter</a></li>
+			<li><a href="#"> <i class="fab fa-facebook"></i>Facebook</a></li>
+			<li><a href="#"> <i class="fab fa-linkedin"></i>LinkedIn</a></li>
+		  </ul>
+		</div>
+		<!-- Om oss och kontaktinformation -->
+		<div class="about card footer-item">
+		  <h1>Om oss</h1>
+		  <p>
+			Dare2Defy är en plattform skapad för att utmana och hjälpa atleter i
+			deras resa att ta nästa steget inom fysisk och mentalhälsa. Här
+			sammanställs expertis inom träning, kost och psykisk hälsa för att
+			inspirera och vägleda individer mot att bryta gränser och nå nya
+			höjder i sin atletiska och personliga utveckling.
+		  </p>
+		</div>
+		<div class="location card footer-item">
+		  <h1>Adress</h1>
+		  <p>Drottninggatan <br> Stockholm, 11151 <br> daretodefy@email.com</p>
+		</div>
+	  </footer>
+	  <!-- Länk till JavaScript filen-->
+	  <script src="tabs.js" defer></script>
 	</body>
-</html>
+  </html>
+  

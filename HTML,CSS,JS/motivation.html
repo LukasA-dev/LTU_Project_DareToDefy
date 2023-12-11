@@ -1,25 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
+  <!-- Huvudstrukturen för webbsidan -->
   <head>
+    <!-- Metainformation för webbsidan -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dare2Defy</title>
+    <!-- Länkar till favicon och externt stilblad -->
     <link rel="icon" type="image/x-icon" href="/images/Dare2DefyLogo.ico">
     <link rel="stylesheet" href="styles.css" />
+    <!-- Extern länk till Font Awesome-stilbladet -->
     <link rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
       integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
       crossorigin="anonymous" referrerpolicy="no-referrer" />
   </head>
   <body>
+    <!-- Huvudsektion med bakgrund och header -->
     <section class="background">
       <header>
+        <!-- Logo-container med länk till startsidan -->
         <div class="logo-container">
           <a href="index.html">
             <img src="../images/Dare2DefyLogo.png" alt="Dare2Defy Logo">
           </a>
         </div>
-        <!-- Menu button -->
+        <!-- Menyknapp för mobilanpassad navigering -->
         <input type="checkbox" id="check">
         <label for="check" class="icons">
           <div class="icon-background">
@@ -27,6 +33,7 @@
             <i class="fa-solid fa-xmark" id="close-icon"></i>
           </div>
         </label>
+        <!-- Navigationslänkar -->
         <nav class="links" style="--items: 4">
           <a href="träning.html" style="--i:0;">Träning</a>
           <a href="kost.html" style="--i:1;">Kost</a>
@@ -36,17 +43,19 @@
         </nav>
       </header>
 
-      <!-- Main content -->
+      <!-- Huvudinnehållssektion -->
       <div class="content-wrapper">
-
+        <!-- Karusell för motivationscitat -->
         <section aria-label="Motivation Quotes">
           <div class="carousel" data-carousel>
+            <!-- Knappar för karusellkontroll -->
             <button class="carousel-button prev" data-carousel-button="prev">
               <i class="fa-solid fa-arrow-left"></i>
             </button>
             <button class="carousel-button next" data-carousel-button="next">
               <i class="fa-solid fa-arrow-right"></i>
             </button>
+            <!-- Karusellbilder och citat -->
             <ul data-slides>
               <li class="slide" data-active>
                 <div class="quote-text">
@@ -72,45 +81,43 @@
             </ul>
           </div>
         </section>
-
-
-
       </div>
-      
+    </section>
 
-
-
-      </section>
-
-      <footer>
-        <div class="logo card footer-item">
-          <img src="../images/Dare2DefyLogo.png" alt="Dare2Defy Logo">
-          <h2>Break Limits | Rise Above</h2>
-        </div>
-        <div class="socials card footer-item">
-          <h1>Socials</h1>
-          <ul>
-            <li><a href="#"> <i class="fab fa-instagram"></i>Instagram</a></li>
-            <li><a href="#"> <i class="fab fa-twitter"></i>Twitter</a></li>
-            <li><a href="#"> <i class="fab fa-facebook"></i>Facebook</a></li>
-            <li><a href="#"> <i class="fab fa-linkedin"></i>LinkedIn</a></li>
-          </ul>
-        </div>
-        <div class="about card footer-item">
-          <h1>Om oss</h1>
-          <p>
-            Dare2Defy är en plattform skapad för att utmana och hjälpa atleter i
-            deras resa att ta nästa steget inom fysisk och mentalhälsa. Här
-            sammanställs expertis inom träning, kost och psykisk hälsa för att
-            inspirera och vägleda individer mot att bryta gränser och nå nya
-            höjder i sin atletiska och personliga utveckling.
-          </p>
-        </div>
-        <div class="location card footer-item">
-          <h1>Adress</h1>
-          <p>Drottninggatan <br> Stockholm, 11151 <br> daretodefy@email.com</p>
-        </div>
-      </footer>
-      <script src="script.js" defer></script>
-    </body>
-  </html>
+    <!-- Sidfotssektion -->
+    <footer>
+      <!-- Logo och varumärkestext -->
+      <div class="logo card footer-item">
+        <img src="../images/Dare2DefyLogo.png" alt="Dare2Defy Logo">
+        <h2>Break Limits | Rise Above</h2>
+      </div>
+      <!-- Sociala medier länkar -->
+      <div class="socials card footer-item">
+        <h1>Socials</h1>
+        <ul>
+          <li><a href="#"> <i class="fab fa-instagram"></i>Instagram</a></li>
+          <li><a href="#"> <i class="fab fa-twitter"></i>Twitter</a></li>
+          <li><a href="#"> <i class="fab fa-facebook"></i>Facebook</a></li>
+          <li><a href="#"> <i class="fab fa-linkedin"></i>LinkedIn</a></li>
+        </ul>
+      </div>
+      <!-- Om oss och kontaktinformation -->
+      <div class="about card footer-item">
+        <h1>Om oss</h1>
+        <p>
+          Dare2Defy är en plattform skapad för att utmana och hjälpa atleter i
+          deras resa att ta nästa steget inom fysisk och mentalhälsa. Här
+          sammanställs expertis inom träning, kost och psykisk hälsa för att
+          inspirera och vägleda individer mot att bryta gränser och nå nya
+          höjder i sin atletiska och personliga utveckling.
+        </p>
+      </div>
+      <div class="location card footer-item">
+        <h1>Adress</h1>
+        <p>Drottninggatan <br> Stockholm, 11151 <br> daretodefy@email.com</p>
+      </div>
+    </footer>
+    <!-- Länk till JavaScript filen-->
+    <script src="script.js" defer></script>
+  </body>
+</html>

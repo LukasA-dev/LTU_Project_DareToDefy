@@ -1,28 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
+	<!-- Grundstruktur för Kost-sidan -->
 	<head>
+		<!-- Metataggar och sidtitel -->
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Dare2Defy</title>
+
+		<!-- Länk till favicon och stilmallar -->
 		<link rel="icon" type="image/x-icon" href="/images/Dare2DefyLogo.ico" />
 		<link rel="stylesheet" href="styles.css" />
+
+		<!-- Font Awesome för ikoner -->
 		<link
 			rel="stylesheet"
 			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
 			integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
 			crossorigin="anonymous"
-			referrerpolicy="no-referrer"
-		/>
+			referrerpolicy="no-referrer" />
 	</head>
 	<body>
+		<!-- Huvudsektion med bakgrundsbild och header -->
 		<section class="background background-nutrition">
 			<header>
+				<!-- Logo och navigationsmeny -->
 				<div class="logo-container">
 					<a href="index.html">
 						<img src="../images/Dare2DefyLogo.png" alt="Dare2Defy Logo" />
 					</a>
 				</div>
-				<!-- Menu button -->
+
+				<!-- Menyknapp för mobilvy -->
 				<input type="checkbox" id="check" />
 				<label for="check" class="icons">
 					<div class="icon-background">
@@ -30,6 +38,8 @@
 						<i class="fa-solid fa-xmark" id="close-icon"></i>
 					</div>
 				</label>
+
+				<!-- Navigationslänkar -->
 				<nav class="links" style="--items: 4">
 					<a href="träning.html" style="--i: 0">Träning</a>
 					<a href="kost.html" style="--i: 1">Kost</a>
@@ -39,10 +49,11 @@
 				</nav>
 			</header>
 
-			<!-- Main content -->
+			<!-- Huvudinnehåll med sidrubrik och innehållsboxar -->
 			<div class="content-wrapper">
 				<h1 class="pageHeader">Kost</h1>
 				<div class="boxWrapper">
+					<!-- Box för Minska vikt -->
 					<div class="box" data-panel="panel-loseweight">
 						<div class="imgBox">
 							<i class="fa-solid fa-minus"></i>
@@ -52,6 +63,8 @@
 							<h2>Minska vikt<br /></h2>
 						</div>
 					</div>
+
+					<!-- Box för Bygga muskler -->
 					<div class="box" data-panel="panel-buildmuscle">
 						<div class="imgBox">
 							<i>💪</i>
@@ -61,6 +74,8 @@
 							<h2>Bygga muskler<br /></h2>
 						</div>
 					</div>
+
+					<!-- Box för Öka vikt -->
 					<div class="box" data-panel="panel-gainweight">
 						<div class="imgBox">
 							<i class="fa-solid fa-plus"></i>
@@ -70,11 +85,14 @@
 							<h2>Öka vikt<br /></h2>
 						</div>
 					</div>
+
+					<!-- Flikpaneler för de olika kostkategorierna -->
 					<div class="tabs__panels">
 						<div id="panel-loseweight" class="panel">
 							<div class="panel-container">
 								<h1>Minska vikt</h1>
 								<p>
+									<!-- Innehåll föratt minska vikt -->
 									<u>Beskrivning:</u><br />
 									För att minska i vikt är det viktigt att skapa en
 									kalorideficit, det vill säga att förbruka mer kalorier än vad
@@ -94,6 +112,7 @@
 							<div class="panel-container">
 								<h1>Bygga muskler</h1>
 								<p>
+									<!-- Innehåll föratt bygga muskler -->
 									<u>Beskrivning:</u><br />
 									För att bygga muskelmassa är det viktigt att konsumera
 									tillräckligt med protein, som är byggstenarna i
@@ -113,6 +132,7 @@
 						<div id="panel-gainweight" class="panel">
 							<div class="panel-container">
 								<h1>Öka vikt</h1>
+								<!-- Innehåll föratt öka vikt -->
 								<p>
 									<u>Beskrivning:</u><br />
 									För att öka i vikt på ett hälsosamt sätt, är det viktigt att
@@ -133,47 +153,41 @@
 			</div>
 		</section>
 
-		<footer>
-			<div class="logo card footer-item">
-				<img src="../images/Dare2DefyLogo.png" alt="Dare2Defy Logo" />
-				<h2>Break Limits | Rise Above</h2>
-			</div>
-			<div class="socials card footer-item">
-				<h1>Socials</h1>
-				<ul>
-					<li>
-						<a href="#"> <i class="fab fa-instagram"></i>Instagram</a>
-					</li>
-					<li>
-						<a href="#"> <i class="fab fa-twitter"></i>Twitter</a>
-					</li>
-					<li>
-						<a href="#"> <i class="fab fa-facebook"></i>Facebook</a>
-					</li>
-					<li>
-						<a href="#"> <i class="fab fa-linkedin"></i>LinkedIn</a>
-					</li>
-				</ul>
-			</div>
-			<div class="about card footer-item">
-				<h1>Om oss</h1>
-				<p>
-					Dare2Defy är en plattform skapad för att utmana och hjälpa atleter i
-					deras resa att ta nästa steget inom fysisk och mentalhälsa. Här
-					sammanställs expertis inom träning, kost och psykisk hälsa för att
-					inspirera och vägleda individer mot att bryta gränser och nå nya
-					höjder i sin atletiska och personliga utveckling.
-				</p>
-			</div>
-			<div class="location card footer-item">
-				<h1>Adress</h1>
-				<p>
-					Drottninggatan <br />
-					Stockholm, 11151 <br />
-					daretodefy@email.com
-				</p>
-			</div>
-		</footer>
-		<script src="tabs.js"></script>
+    <!-- Sidfotssektion -->
+    <footer>
+		<!-- Logo och varumärkestext -->
+		<div class="logo card footer-item">
+		  <img src="../images/Dare2DefyLogo.png" alt="Dare2Defy Logo">
+		  <h2>Break Limits | Rise Above</h2>
+		</div>
+		<!-- Sociala medier länkar -->
+		<div class="socials card footer-item">
+		  <h1>Socials</h1>
+		  <ul>
+			<li><a href="#"> <i class="fab fa-instagram"></i>Instagram</a></li>
+			<li><a href="#"> <i class="fab fa-twitter"></i>Twitter</a></li>
+			<li><a href="#"> <i class="fab fa-facebook"></i>Facebook</a></li>
+			<li><a href="#"> <i class="fab fa-linkedin"></i>LinkedIn</a></li>
+		  </ul>
+		</div>
+		<!-- Om oss och kontaktinformation -->
+		<div class="about card footer-item">
+		  <h1>Om oss</h1>
+		  <p>
+			Dare2Defy är en plattform skapad för att utmana och hjälpa atleter i
+			deras resa att ta nästa steget inom fysisk och mentalhälsa. Här
+			sammanställs expertis inom träning, kost och psykisk hälsa för att
+			inspirera och vägleda individer mot att bryta gränser och nå nya
+			höjder i sin atletiska och personliga utveckling.
+		  </p>
+		</div>
+		<div class="location card footer-item">
+		  <h1>Adress</h1>
+		  <p>Drottninggatan <br> Stockholm, 11151 <br> daretodefy@email.com</p>
+		</div>
+	  </footer>
+	  <!-- Länk till JavaScript filen-->
+	  <script src="tabs.js" defer></script>
 	</body>
-</html>
+  </html>
+  

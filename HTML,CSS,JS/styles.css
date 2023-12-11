@@ -1,48 +1,51 @@
+/* Gradient angle - för bakgrunds effekt på olika element */
 @property --gradient-angle {
 	syntax: "<angle>";
 	initial-value: 0deg;
 	inherits: false;
 }
 
+/* Grundläggande färginställningar för webbplatsen */
 :root {
-	--clr-1: #1b1b1b;
+	--clr-1: #1b1b1b; /* Mörk basfärg */
 	--clr-2: #f652a0;
 	--clr-3: #2da89e;
 	--clr-4: #7a99ff;
 	--clr-5: #4e62a3;
 	--clr-6: #20726b;
 }
+
+/* Grundinställningar för html-elementet */
 html {
-	background: #1b1b1b;
+	background: #1b1b1b; /* Bakgrundsfärg */
 }
 
+/* Global stilinställning */
 * {
 	box-sizing: border-box;
 }
 
-/* General Styles */
+/* Generella stilar för body-elementet */
 body {
-	/*Font-styles*/
-	font-family: "Roboto", sans-serif;
-	font-size: 16px;
-	font-style: italic;
-	font-weight: bold;
-	color: #ffffff;
-
-	/*Positioning */
-	margin: 0;
-	padding: 0;
-	scroll-behavior: smooth;
-	overflow-x: hidden;
+	font-family: "Roboto", sans-serif; /* Typsnitt */
+	font-size: 16px; /* Textstorlek */
+	font-style: italic; /* Textstil */
+	font-weight: bold; /* Textvikt */
+	color: #ffffff; /* Textfärg */
+	margin: 0; /* Utan marginal */
+	padding: 0; /* Utan padding */
+	scroll-behavior: smooth; /* Jämn scrollning */
+	overflow-x: hidden; /* Göm horisontell scrollbar */
 }
 
-/*Background properties */
+/* Bakgrundsegenskaper för olika sektioner */
 .background {
-	background-position: top;
-	background-repeat: no-repeat;
-	background-size: cover;
+	background-position: top; /* Bakgrundens position */
+	background-repeat: no-repeat; /* Bakgrund ska inte upprepas */
+	background-size: cover; /* Bakgrund täcker hela elementet */
 }
 
+/* Bakgrunder för respektive HMTL filer*/
 .background-general {
 	background-image: url("https://images.unsplash.com/photo-1574680096145-d05b474e2155?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
 }
@@ -57,130 +60,145 @@ body {
 .background-wellness {
 	background-image: url("/images/wellness.jpg");
 }
-/*Scrollbar Styles for Chrome*/
+
+/* Stilar för anpassad scrollbar i Chrome */
 ::-webkit-scrollbar {
-	width: 12px;
+	width: 12px; /* Bredd på scrollbar */
 }
 
+/* Färg på scrollbar-spåret */
 ::-webkit-scrollbar-track {
 	background-color: #000000;
 }
-
+/* Gradient för scrollbar-thumb */
 ::-webkit-scrollbar-thumb {
 	background: linear-gradient(var(--clr-3), var(--clr-4));
 }
-
+/* Gradient för scrollbar-thumb vid hover */
 ::-webkit-scrollbar-thumb:hover {
 	background: linear-gradient(var(--clr-6), var(--clr-5));
 }
 
-/* Logo */
+/* Stilar för logotypen */
 .logo-container img {
 	height: auto;
 	width: 120px;
 }
 
-/*Logo spin on hover*/
+/* Rotationseffekt för logotypen vid hover */
 .logo-container img:hover {
 	transform: rotate(360deg);
 	transition: transform 0.3s;
 }
 
-/*Header */
+/* Stilar för header */
 header {
-	position: sticky;
-	padding: 0 2rem;
-	display: flex;
-	top: 0;
-	left: 0;
-	width: 100%;
-	justify-content: space-between;
-	align-items: center;
-	width: 100%;
-	z-index: 100;
+	position: sticky; /* Fast position */
+	padding: 0 2rem; /* Padding */
+	display: flex; /* Flexbox layout */
+	top: 0; /* Position högst upp */
+	left: 0; /* Position längst till vänster */
+	width: 100%; /* Full bredd */
+	justify-content: space-between; /* Mellanrum mellan element */
+	align-items: center; /* Centrerade element */
+	z-index: 100; /* Z-index för att placera över andra element */
 }
+/* ::before-pseudoelement för att skapa en övertoningseffekt i headern */
 header::before {
 	content: "";
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	background: rgba(0, 0, 0, 0.3);
-	backdrop-filter: blur(50px);
-	z-index: -1;
+	position: absolute; /* Absolut position */
+	top: 0; /* Position högst upp */
+	left: 0; /* Position längst till vänster */
+	width: 100%; /* Full bredd */
+	height: 100%; /* Full höjd */
+	background: rgba(0, 0, 0, 0.3); /* Svart bakgrund med opacitet */
+	backdrop-filter: blur(50px); /* Blur-effekt */
+	z-index: -1; /* Placeras bakom andra element */
 }
 
-/*Navigation menu*/
+/*Navigations meny-stilar*/
 nav {
 	position: relative;
 	max-width: 1200px;
-	margin: 0 auto;
-	display: flex;
-	justify-content: space-between;
+	margin: 0 auto; /* Centrerad */
+	display: flex; /* Flexbox layout */
+	justify-content: space-between; /* Mellanrum mellan element */
 }
-
+/* Döljer kryssrutan för menyn i mobilvy */
 #check {
 	display: none;
 }
 
+/* Stilar för menyikoner */
 .icons {
-	position: absolute;
-	right: 15%;
-	font-size: 3rem;
-	color: #ffffff;
-	cursor: pointer;
-	display: none;
-	padding: 8px;
+	position: absolute; /* Absolut position */
+	right: 15%; /* Position från högerkant */
+	font-size: 3rem; /* Storlek på ikon */
+	color: #ffffff; /* Ikonfärg */
+	cursor: pointer; /* Pekarens utseende */
+	display: none; /* Gömd som standard */
+	padding: 8px; /* Padding runt ikonen */
 }
+/* Förstorar ikoner vid hover */
 .icons:hover {
 	font-size: 3.2rem;
 }
-
+/* Gridlayout för navigationslänkar */
 .links {
 	display: grid;
 	grid-template-columns: repeat(var(--items), 1fr);
-	grid-template-rows: repeat(1, 1fr);
+	grid-template-rows: repeat(1, 1fr); /* En rad */
 	font-size: 1.2rem;
 }
 
+/* Stilar för varje navigationslänk */
 .links > a {
-	color: #d6d6d6;
-	padding: 4rem 1rem;
-	transition: all 0.5s;
-	text-align: center;
-	text-decoration: none;
-	margin-left: 2.5rem;
+	color: #d6d6d6; /* Länkfärg */
+	padding: 4rem 1rem; /* Padding */
+	transition: all 0.5s; /* Övergångseffekt */
+	text-align: center; /* Centrerad text */
+	text-decoration: none; /* Ingen textdekorering */
+	margin-left: 2.5rem; /* Vänstermarginal */
 }
 
+/* Hovereffekt för navigationslänkar */
 .links > a:hover {
 	background-image: linear-gradient(
 		rgba(0, 0, 0, 0),
 		rgba(255, 255, 255, 0.384)
 	);
 }
-/*Underline for navigation links*/
+/*  Underlinjen i navigationsmenyn */
 .links > .line {
-	background: #ffffff;
+	background: #ffffff; /* Färg */
 	height: 2px;
-	pointer-events: none;
-	opacity: 0;
-	transition: all 0.3s;
+	pointer-events: none; /* Ej klickbar */
+	opacity: 0; /* Osynlig */
+	transition: all 0.3s; /* Övergångseffekt */
 	position: absolute;
-	bottom: 0;
-	left: var(--left, calc((100% / var(--items) * (var(--index) - 1)) + 2.5rem));
-	width: var(--width, calc((100% / var(--items)) - 2.5rem));
-	--index: 0;
-}
-/* Activates the line*/
-.links > a:hover ~ .line {
-	opacity: 1;
+	bottom: 0; /* Position på linjen */
+	left: var(
+		--left,
+		calc((100% / var(--items) * (var(--index) - 1)) + 2.5rem)
+	); /* Beräknad position */
+	width: var(
+		--width,
+		calc((100% / var(--items)) - 2.5rem)
+	); /* Uträkning för bredden på linjen */
+	--index: 0; /* Initialt index för vald länk */
 }
 
-/* Updates the position of the line based on the hovered link */
-.links > .line {
-	left: var(--left, +2.5rem);
+/* Aktiverar underlinjen vid hover över länk */
+.links > a:hover ~ .line {
+	opacity: 1; /* Gör synlig */
 }
+
+/* Uppdaterar positionen för underlinjen baserat på hoverad länk */
+.links > .line {
+	left: var(--left, +2.5rem); /* Justerar position */
+}
+
+/* Anpassar positionen på underlinjen för varje länk */
 .links > a:nth-of-type(1):hover ~ .line {
 	--left: calc((100% / var(--items) * 0) + 2.5rem);
 }
@@ -194,29 +212,29 @@ nav {
 	--left: calc((100% / var(--items) * 3) + 2.5rem);
 }
 
-/*Content wrapper*/
+/* Stilar för content containern */
 .content-wrapper {
-	min-height: 100vh;
-	position: relative;
-
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-wrap: wrap;
+	min-height: 100vh; /* Sätter minsta höjd på main contenet */
+	position: relative; /* Relativ position */
+	display: flex; /* Flexbox layout */
+	justify-content: center; /* Centrerat innehåll */
+	align-items: center; /* Centrerade element */
+	flex-wrap: wrap; /* Tillåter radbrytning */
 }
+/* Stilar för header i main-containern */
 .content-wrapper .pageHeader {
 	margin: 0;
-	font-size: 6rem;
-	align-self: flex-start;
-	text-align: center;
-	min-width: 1000px;
-	background: #1b1b1bda;
-	margin-top: 40px;
-	position: relative;
-	border-radius: 10px;
+	font-size: 6rem; /* Textstorlek */
+	align-self: flex-start; /* Justering till vänster */
+	text-align: center; /* Centrerad text */
+	min-width: 1000px; /* Minsta bredd */
+	background: #1b1b1bda; /* Bakgrundsfärg med opacitet */
+	margin-top: 40px; /* Övre marginal */
+	position: relative; /* Relativ position */
+	border-radius: 10px; /* Rundade hörn */
 	display: block;
 }
-
+/* Effekt för headern vid hover */
 .content-wrapper .pageHeader:after {
 	content: "";
 	position: absolute;
@@ -229,179 +247,189 @@ nav {
 	transform-origin: bottom right;
 	transition: transform 0.25s ease-out;
 }
+/* Effekt för headern vid hover */
 .content-wrapper h1:hover:after {
 	transform: scaleX(1);
 	transform-origin: bottom left;
 }
 
-/* Wellness */
+/* Wellness container-stilar */
 .wellness-container {
-	background-color: var(--clr-1);
-	border-radius: 20px;
-	max-width: 1000px;
-	width: 80%; /* Responsive width */
+	background-color: var(--clr-1); /* Bakgrundsfärg */
+	border-radius: 20px; /* Rundade hörn */
+	max-width: 1000px; /* Maximal bredd */
+	width: 80%; /* Responsiv bredd */
 	padding: 20px;
-	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Skugga */
 
+	/* Responsiva stilar vid smalare skärmar */
 	@media (max-width: 1000px) {
-	  width: 90%;
-	  padding: 10px;
+		width: 90%; /* Bredd */
+		padding: 10px; /* Padding */
 	}
-  }
-/* Box content */
+}
+
+/* Stilar för boxar inuti boxWrapper */
 .boxWrapper {
-	opacity: 0.99;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-wrap: wrap;
-	align-self: flex-start;
+	opacity: 0.99; /* Opacitet */
+	display: flex; /* Flexbox layout */
+	justify-content: center; /* Centrerat innehåll */
+	align-items: center; /* Centrerade element */
+	flex-wrap: wrap; /* Radbrytning */
+	align-self: flex-start; /* Justering till vänster */
 }
 
+/* Grundläggande stilar för varje box */
 .box {
-	position: relative;
-	width: 300px;
-	height: 300px;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	margin: 40px;
-	transition: 0.5s;
-	background: var(--clr-1);
-	cursor: pointer;
+	position: relative; /* Relativ position */
+	width: 300px; /* Bredd */
+	height: 300px; /* Höjd */
+	display: flex; /* Flexbox layout */
+	justify-content: center; /* Centrerat innehåll */
+	align-items: center; /* Centrerade element */
+	margin: 40px; /* Marginal */
+	transition: 0.5s; /* Övergångseffekt */
+	background: var(--clr-1); /* Bakgrundsfärg */
+	cursor: pointer; /* Pekarens utseende */
 }
 
+/* Stilar för bild inuti varje box */
 .box .imgBox {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
+	position: absolute; /* Absolut position */
+	top: 0; /* Positionerad högst upp */
+	left: 0; /* Positionerad längst till vänster */
+	width: 100%; /* Full bredd */
+	height: 100%; /* Full höjd */
 	padding: 10px;
 }
+/* Stilar för ikoner inuti bildboxen */
 .box .imgBox i {
-	font-style: normal;
+	font-style: normal; /* Normal stil, överskrider andra stilar som påverkar iconerna */
 	position: absolute;
 	font-size: 5rem;
-	position: absolute;
-	font-size: 5rem;
+
+	/* Centrering */
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
 }
+
+/* Stilar för bilder inuti bildboxen */
 .box .imgBox img {
 	max-width: 100%;
 	opacity: 0.1;
 	transition: 0.5s;
 }
-
-.box:before {
-	content: "";
-	position: absolute;
+/* Stilar för pseudo-element före och efter varje .box */
+.box:before,
+.box:after {
+	content: ""; /* Inget innehåll */
+	position: absolute; /* Absolut position */
 	top: -2px;
 	left: -2px;
 	right: -2px;
-	bottom: -2px;
-	background: #ffffff;
-	z-index: -1;
+	bottom: -2px; /* Positionering */
+	background: #ffffff; /* Bakgrundsfärg */
+	z-index: -1; /* Z-index för att placera under boxen */
 }
 .box:after {
-	content: "";
-	position: absolute;
-	top: -2px;
-	left: -2px;
-	right: -2px;
-	bottom: -2px;
-	background: #ffffff;
-	filter: blur(40px);
-	z-index: -2;
+	filter: blur(40px); /* Blur-effekt */
+	z-index: -2; /* Lägre z-index för att placera längre bak */
 }
+
+/* Övergångar för .box och dess pseudo-element */
 .box,
 .box:before,
 .box:after {
-	transition: height 0.3s ease, opacity 0.3s ease, transform 0.3s ease;
+	transition: height 0.3s ease, opacity 0.3s ease, transform 0.3s ease; /* Övergångseffekter */
 }
 
-/* Only target the active box for the gradient and animation */
+/* Stilar för aktiva boxar */
 .box.active:before,
 .box.active:after {
 	background: conic-gradient(
 		from var(--gradient-angle),
 		var(--clr-3),
 		var(--clr-4)
-	);
-	animation: rotation 5s linear infinite;
-}
-.box:hover .box-content,
-.box.active .box-content {
-	opacity: 1;
+	); /* Gradientbakgrund */
+	animation: rotation 5s linear infinite; /* Roterande animation */
 }
 
+/* Stilar för att visa innehåll och bilder vid hover och aktiv tillstånd */
+.box:hover .box-content,
+.box.active .box-content,
 .box:hover .imgBox img,
 .box.active .imgBox img {
-	opacity: 1;
+	opacity: 1; /* Full opacitet */
 }
 
+/* Dölj ikoner vid hover och aktiv tillstånd */
 .box:hover .imgBox i,
 .box.active .imgBox i {
-	display: none;
+	display: none; /* Göm ikon */
 }
+
+/* Ändra höjd vid hover och aktiv tillstånd */
 .box:hover,
 .box.active {
-	height: 400px;
+	height: 400px; /* Ökad höjd */
 }
 
+/* Stilar för innehåll i varje box */
 .box .box-content {
-	position: absolute;
-	bottom: 0;
-	left: 10px;
-	right: 10px;
+	position: absolute; /* Absolut position */
 	bottom: 10px;
-	height: 90px;
-	background: rgba(0, 0, 0, 0.4);
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	text-align: center;
-	opacity: 0;
-	transition: 0.5s;
+	left: 10px;
+	right: 10px; /* Positionering */
+	height: 90px; /* Höjd */
+	background: rgba(0, 0, 0, 0.4); /* Halvtransparent bakgrund */
+	display: flex; /* Flexbox layout */
+	justify-content: center; /* Centrerat innehåll */
+	align-items: center; /* Centrerade element */
+	text-align: center; /* Centrerad text */
+	opacity: 0; /* Osynligt initialt */
+	transition: 0.5s; /* Övergångseffekt */
 }
 
+/* Stilar för rubriker inuti innehåll */
 .box .box-content h2 {
-	font-size: 20px;
-	line-height: 20px;
-	letter-spacing: 1px;
+	font-size: 20px; /* Textstorlek */
+	line-height: 20px; /* Texthöjd */
+	letter-spacing: 1px; /* Bokstavsavstånd */
 }
 .box .box-content h2 span {
-	font-size: 14px;
-	line-height: 20px;
-	letter-spacing: 3px;
+	font-size: 14px; /* Mindre textstorlek för span */
+	line-height: 20px; /* Texthöjd */
+	letter-spacing: 3px; /* Större bokstavsavstånd */
 }
 
-/* Styles for tab panel */
+/* Allmänna stilar för varje flikpanel (tabs) */
 .panel {
 	transition: max-height 0.5s ease-in-out, padding 0.5s ease-in-out,
 		opacity 0.5s ease;
-	opacity: 0;
+
+	opacity: 0; /* Initial opacitet är 0 för att göra panelen osynlig */
 	padding: 0 20px;
 }
 
+/* Stilar för aktiva flikpaneler */
 .panel.active {
 	height: 100%;
 	opacity: 1;
 	padding: 20px;
 }
 
-/* Hide all panels by default */
+/* Döljer alla paneler som standard */
 .tabs__panels .panel {
 	display: none;
 }
 
-/* Display the panel when the corresponding tab is active */
+/* Visar panelen när motsvarande flik är aktiv */
 .tabs__panels .panel.active {
 	display: flex;
 }
 
+/* Stilar för innehållsbehållaren i varje panel */
 .panel-container {
 	background: #1b1b1b;
 	border-radius: 10px;
@@ -411,12 +439,13 @@ nav {
 	line-height: 1.5rem;
 }
 
-/* Motivational quotes carousel */
+/* Stilar för karusellen för motivationscitat */
 .carousel {
-	width: 100vw;
-	height: 100vh;
+	width: 100vw; /*Full bredd av viewporten*/
+	height: 100vh; /*Full höjd av viewporten*/
 	position: relative;
 }
+/* Stilar för varje slide i karusellen */
 .slide {
 	position: absolute;
 	inset: 0;
@@ -430,6 +459,7 @@ nav {
 	flex-direction: column;
 }
 
+/* Stilar för texten i varje slide */
 .quote-text {
 	position: absolute;
 	background-color: #1b1b1bcc;
@@ -438,6 +468,7 @@ nav {
 	border-radius: 10px;
 }
 
+/* Animering för att highlighta span */
 .quote-text span {
 	animation: background-pan 1s linear infinite;
 	background: linear-gradient(
@@ -451,15 +482,17 @@ nav {
 	background-size: 200%;
 }
 
-.slide h1 {
+/* Stilar för rubriker i varje slide */
+.slide h1,
+.slide h2 {
 	font-size: 3rem;
 	padding: 0 10rem;
 }
 .slide h2 {
-	font-size: 2rem;
-	padding: 0 10rem;
+	font-size: 2rem; /* Mindre Textstorlek för h2 */
 }
 
+/* Stilar för bilder i varje slide */
 .slide img {
 	width: 100%;
 	height: 100%;
@@ -467,18 +500,21 @@ nav {
 	object-position: center;
 }
 
+/* Stilar för aktiva slides */
 .slide[data-active] {
 	opacity: 1;
 	z-index: 1;
 	transition-delay: 0s;
 }
 
+/* Stil för unordered list i carousel*/
 .carousel ul {
 	margin: 0;
 	padding: 0;
 	list-style: none;
 }
 
+/* Stilar för karusellknapparna */
 .carousel-button {
 	border: none;
 	color: #ffffff;
@@ -491,6 +527,7 @@ nav {
 	z-index: 2;
 }
 
+/* Hover-effekter för karusellknapparna */
 .carousel-button:hover,
 .carousel-button:focus {
 	animation: background-pan 0.6s linear infinite;
@@ -506,6 +543,7 @@ nav {
 	cursor: pointer;
 }
 
+/* Positionering av karusellknapparna */
 .carousel-button.prev {
 	left: 5%;
 }
@@ -514,8 +552,9 @@ nav {
 	right: 5%;
 }
 
-/*Brand container*/
+/* Stilar för varumärkescontainern på indexsidan */
 .brand {
+	/* Layout och positionering */
 	margin: 10px 50px;
 	padding: 10px;
 	font-size: 3rem;
@@ -524,7 +563,7 @@ nav {
 	border-radius: 10px;
 	transform: skew(-10deg);
 }
-
+/* Effekt för varumärkescontainern vid hover */
 .brand:after {
 	content: "";
 	position: absolute;
@@ -545,6 +584,7 @@ nav {
 	background: none;
 }
 
+/* Keyframes för att skapa egna animationer */
 @keyframes background-pan {
 	from {
 		background-position: 200% center;
@@ -563,29 +603,33 @@ nav {
 	}
 }
 
-/*footer*/
+/* Stilar för footern */
 footer {
+	/* Flexbox för responsiv design*/
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-around;
 	padding: 2rem;
 	background: var(--clr-1);
-	z-index: 1;
+	z-index: 1; /* Z-index för positionering över andra element */
 	position: relative;
 }
 
+/* Stilar för varje element i sidfoten */
 .footer-item {
 	text-align: center;
 	transition: all 0.3s linear;
-	flex: 1 1 auto;
+	flex: 1 1 auto; /* Flexibilitet i storlek */
 	margin: 2%;
 }
 
+/* Stilar för logotypen */
 .logo {
-	order: -1; /* This will ensure that .logo stays at the beginning */
-	flex: 1 1 100%; /* This will ensure that .logo takes the full width when possible */
+	order: -1; /* Säkrar att logotypen är den första itemen i footern */
+	flex: 1 1 100%; /* Säkrar att logon tar upp hela bredden i footern */
 }
 
+/* Stilar för sociala medier, 'om oss' och 'plats'-sektioner */
 .socials,
 .about,
 .location {
@@ -595,11 +639,13 @@ footer {
 	background: var(--clr-1);
 }
 
+/* Stilar för logotypbilden */
 .logo img {
 	height: auto;
 	width: 160px;
 }
 
+/* Stilar för korten (itemsen) */
 .card {
 	aspect-ratio: 1/1;
 	width: auto;
@@ -609,11 +655,16 @@ footer {
 	border-radius: 0.5rem;
 	position: relative;
 }
+
+/* Psuedoelement som skapar en roterande gradienteffekt för korten */
 .card::before,
 .card::after {
 	content: "";
 	position: absolute;
-	inset: -4px;
+	inset: -4px; /* Position inuti kortet */
+
+	/* Använder utav --gradient-angle som deklarerades högst upp i filen.
+	denna skapar en lysande roterande effekt bakom korten */
 	background: conic-gradient(
 		from var(--gradient-angle),
 		var(--clr-3),
@@ -621,14 +672,18 @@ footer {
 		var(--clr-3),
 		var(--clr-4)
 	);
-	border-radius: inherit;
-	animation: rotation 4s linear infinite;
-	z-index: -1;
+
+	border-radius: inherit; /* Ärver rundade hörn */
+	animation: rotation 4s linear infinite; /* Oändlig roterande animation */
+	z-index: -1; /* Z-index för att placera under innehållet */
 }
+
+/* Skapar en suddig-effekt (blur)*/
 .card::after {
 	filter: blur(1.5rem);
 }
 
+/* Skapar rotations effekten*/
 @keyframes rotation {
 	0% {
 		--gradient-angle: 0deg;
@@ -638,6 +693,7 @@ footer {
 	}
 }
 
+/* Stilar för sociala medier-listan */
 .socials ul {
 	list-style: none;
 	line-height: 30px;
@@ -647,78 +703,97 @@ footer {
 	text-align: center;
 }
 
+/* Vit textfärg */
 .socials a {
 	color: rgb(255, 255, 255);
 }
 
+/* Hovereffekter för sociala medier-länkar */
 .socials ul li :hover {
-	color: rgba(255, 255, 255, 0.5);
+	color: rgba(255, 255, 255, 0.5); /* Halvtransparent vit vid hover */
 }
+/* Stilar för adress-sektionen */
 .location {
-	line-height: 40px;
+	line-height: 40px; /* Högre texthöjd */
 }
 
-/*Styles för Mobil/Smalare Enhet*/
+
+/* Responsiva stilar för smalare enheter och mobilvy */
 @media (max-width: 767px) {
+	/* Anpassade bakgrundsbilder för mindre skärmar.
+	Denna bild är vertikal istället för horisontell */
 	.background {
 		background-image: url("https://images.unsplash.com/photo-1595078475328-1ab05d0a6a0e?q=80&w=2000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
 	}
+
+
 	.background-wellness {
-		background-image: url("/images/wellness.jpg");
+		background-image: url("/images/wellness.jpg"); /* Bakgrundsbild för wellness-sektion */
 	}
-	/*Header*/
+
+
+	/* Visar menyikonen i mobilvy */
 	.icons {
 		display: inline-flex;
 	}
+	/* Döljer menyn när kryssrutan är markerad */
 	#check:checked ~ .icons #menu-icon {
 		display: none;
 	}
+
+	/* Visar kryssikonen när menyn är togglad */
 	.icons #close-icon {
-		display: none;
+		display: none; /* Gömmer stängningsikon som standard */
 	}
 	#check:checked ~ .icons #close-icon {
-		display: block;
+		display: block; /* Visar stängningsikon när aktiv */
 	}
 
+	/* Stilar för navigationslänkar i mobilvy */
 	.links {
-		position: absolute;
-		top: 100%;
-		left: 0;
-		height: 0;
-		width: 100%;
-		background: rgba(0, 0, 0, 0.1);
-		backdrop-filter: blur(50px);
-		box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3);
-		transition: 0.3s ease;
-		overflow: hidden;
+		position: absolute; 
+		top: 100%; /* Positionerad direkt under headern */
+		left: 0; 
+		height: 0; 
+		width: 100%; 
+		background: rgba(0, 0, 0, 0.1); /* Halvtransparent bakgrund */
+		backdrop-filter: blur(50px); /* Blur-effekt */
+		box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3); /* Skugga */
+		transition: 0.3s ease; /* Övergångseffekt */
+		overflow: hidden; /* Gömmer innehållet initialt */
 
+		/*Flexbox layout*/
 		display: flex;
 		flex-direction: column;
 		justify-content: space-evenly;
 	}
+	/* Expanderar navigationslänkarna när checkboxen är ikryssad */
 	#check:checked ~ .links {
 		height: 20rem;
 	}
 
+	/* Stilar för varje navigationslänk i mobilvy */
 	.links > a {
-		margin-left: 0;
-		padding: 0.5rem 0;
-		display: inline-block;
+		margin-left: 0; /* Utan vänstermarginal */
+		padding: 0.5rem 0; /* Padding */
+		display: inline-block; 
 		width: 210px;
 		height: 100%;
-		margin: auto;
-		line-height: 4rem;
-
-		transition: 0.3s ease;
-		opacity: 0;
-		transform: translateY(-50px);
+		margin: auto; /* Centrerad */
+		line-height: 4rem; /* Texthöjd */
+	
+		transition: 0.3s ease; /* Övergångseffekt */
+		opacity: 0; /* Initialt osynlig */
+		transform: translateY(-50px); /* Förskjutning nedåt */
 	}
+	/* Animerar länkarna vid visning */
 	#check:checked ~ .links a {
 		transform: translateY(0);
 		opacity: 1;
 		transition-delay: calc(0.15s * var(--i));
 	}
 
+	/* Hovereffekter för navigationslänkar */
 	.links a:hover {
 		background-image: linear-gradient(
 			to left,
@@ -728,71 +803,77 @@ footer {
 		text-decoration: underline;
 	}
 
+	/* Döljer underlinjen i navigationsmenyn i mobilvy */
 	.line {
 		display: none;
 	}
 
+	/* Anpassar storlek på sidhuvud och rubriker för smalare enheter */
 	.content-wrapper .pageHeader {
-		font-size: 4rem;
+		font-size: 4rem; /* Mindre textstorlek */
 	}
 
-	.slide h1 {
-		font-size: 2rem;
-		padding: 0 5rem;
-	}
-	.slide h2 {
-		font-size: 1rem;
-		padding: 0 5rem;
+	.slide h1, .slide h2 {
+		font-size: 2rem; /* Mindre textstorlek för huvudrubriker */
+		padding: 0 5rem; /* Mindre padding */
 	}
 }
+
 @media only screen and (max-width: 550px) {
 	.content-wrapper .pageHeader {
 		font-size: 2.5rem;
 	}
 }
-/* Styles för väldigt smala enheter*/
+/* Ytterligare anpassningar för väldigt smala enheter */
 @media only screen and (max-width: 400px) {
 	body {
-		font-size: 14px;
+		font-size: 14px; /* Mindre textstorlek */
 	}
-	/* För att inte förstöra bakgrundsbilden används en färg istället*/
+
+	/* Anpassar bakgrund för huvudsektionen */
 	.background {
-		background: #1b1b1b;
+		background: #1b1b1b; /* Enfärgad bakgrund */
 	}
-	/* På wellness-sidan vill jag behålla den varma känslan, därför används en gradient med samma varma färger*/
+
+	/* Anpassar bakgrund för wellness-sektionen */
 	.background-wellness {
-		background: linear-gradient(60deg,#ffb84d, rgb(98, 183, 223));
+		background: linear-gradient(60deg, #ffb84d, rgb(98, 183, 223)); /* Varm gradient */
 	}
+	/* Mindre marginal och padding för innehållsbehållaren */
 	.content-wrapper {
 		margin: 0;
 		padding: 0;
 	}
+	/* Mindre storlek på boxar */
 	.box {
-		width: 200px;
-		height: 200px;
-		margin: 10px;
+		width: 200px; /* Mindre bredd */
+		height: 200px; /* Mindre höjd */
+		margin: 10px; /* Mindre marginal */
 	}
 	.box:hover {
-		height: 270px;
+		height: 270px; /* Höjd vid hover */
 	}
+	/* Anpassar storlek och formatering på boxinnehåll */
 	.box .box-content {
-		height: 60px;
+		height: 60px; /* Mindre höjd på innehåll */
 	}
 	.box .box-content h2 {
-		font-size: 16px;
-		line-height: 10px;
-		letter-spacing: 1px;
+		font-size: 16px; /* Mindre textstorlek */
+		line-height: 10px; /* Mindre texthöjd */
+		letter-spacing: 1px; /* Mindre bokstavsavstånd */
 	}
 	.box .box-content h2 span {
-		font-size: 12px;
-		line-height: 20px;
-		letter-spacing: 2px;
+		font-size: 12px; /* Ännu mindre textstorlek */
+		line-height: 20px; /* Större texthöjd */
+		letter-spacing: 2px; /* Större bokstavsavstånd */
 	}
 
+	/* Gör varje footerelement full bredd */
 	.footer-item {
-		flex: 1 1 100%;
+		flex: 1 1 100%; /* Tar upp hela bredden */
 	}
+	/* Anpassar bredd på kortkomponenterna */
 	.card {
-		width: 220px;
+		width: 220px; /* Mindre bredd */
 	}
 }
