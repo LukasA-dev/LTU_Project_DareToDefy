@@ -1,1 +1,0 @@
-Fictional organization for a project in an introductory course to web development at LTU.

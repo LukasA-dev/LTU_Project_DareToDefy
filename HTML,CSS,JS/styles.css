@@ -55,10 +55,10 @@ body {
 }
 
 .background-nutrition {
-	background-image: url("/images/nutritionbg.jpg");
+	background-image: url("../images/nutritionbg.jpg");
 }
 .background-wellness {
-	background-image: url("/images/wellness.jpg");
+	background-image: url("../images/wellness.jpg");
 }
 
 /* Stilar för anpassad scrollbar i Chrome */
@@ -722,7 +722,7 @@ footer {
 
 
 	.background-wellness {
-		background-image: url("/images/wellness.jpg"); /* Bakgrundsbild för wellness-sektion */
+		background-image: url("../images/wellness.jpg"); /* Bakgrundsbild för wellness-sektion */
 	}
 
 
