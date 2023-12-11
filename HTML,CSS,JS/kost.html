@@ -1,185 +1,179 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dare2Defy</title>
-    <link rel="icon" type="image/x-icon" href="/images/Dare2DefyLogo.ico">
-    <link rel="stylesheet" href="styles.css" />
-    <link rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
-      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
-      crossorigin="anonymous" referrerpolicy="no-referrer" />
-  </head>
-  <body>
-    <section class="background background-nutrition">
-      <header>
-        <div class="logo-container">
-          <a href="index.html">
-            <img src="../images/Dare2DefyLogo.png" alt="Dare2Defy Logo">
-          </a>
-        </div>
-        <!-- Menu button -->
-        <input type="checkbox" id="check">
-        <label for="check" class="icons">
-          <div class="icon-background">
-            <i class="fa-sharp fa-solid fa-bars-staggered" id="menu-icon"></i>
-            <i class="fa-solid fa-xmark" id="close-icon"></i>
-          </div>
-        </label>
-        <nav class="links" style="--items: 4">
-          <a href="träning.html" style="--i:0;">Träning</a>
-          <a href="kost.html" style="--i:1;">Kost</a>
-          <a href="motivation.html" style="--i:2;">Motivation</a>
-          <a href="wellness.html" style="--i:3;">Wellness</a>
-          <span class="line"></span>
-        </nav>
-      </header>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Dare2Defy</title>
+		<link rel="icon" type="image/x-icon" href="/images/Dare2DefyLogo.ico" />
+		<link rel="stylesheet" href="styles.css" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+			integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		/>
+	</head>
+	<body>
+		<section class="background background-nutrition">
+			<header>
+				<div class="logo-container">
+					<a href="index.html">
+						<img src="../images/Dare2DefyLogo.png" alt="Dare2Defy Logo" />
+					</a>
+				</div>
+				<!-- Menu button -->
+				<input type="checkbox" id="check" />
+				<label for="check" class="icons">
+					<div class="icon-background">
+						<i class="fa-sharp fa-solid fa-bars-staggered" id="menu-icon"></i>
+						<i class="fa-solid fa-xmark" id="close-icon"></i>
+					</div>
+				</label>
+				<nav class="links" style="--items: 4">
+					<a href="träning.html" style="--i: 0">Träning</a>
+					<a href="kost.html" style="--i: 1">Kost</a>
+					<a href="motivation.html" style="--i: 2">Motivation</a>
+					<a href="wellness.html" style="--i: 3">Wellness</a>
+					<span class="line"></span>
+				</nav>
+			</header>
 
-      <!-- Main content -->
-      <div class="content-wrapper">
-        <h1 class="pageHeader">Kost</h1>
-        <div class="boxWrapper">
-          <div class="box" data-panel="panel-loseweight">
-            <div class="imgBox">
-              <i class="fa-solid fa-minus"></i>
-              <img
-                src="../images/weightloss.jpg">
-            </div>
-            <div class="box-content">
-              <h2>Minska vikt<br></h2>
-            </div>
-          </div>
-          <div class="box" data-panel="panel-buildmuscle">
-            <div class="imgBox">
-              <i>💪</i>
-              <img
-                src="../images/musclegain.jpg">
-            </div>
-            <div class="box-content">
-              <h2>Bygga muskler<br></h2>
-            </div>
-          </div>
-          <div class="box" data-panel="panel-gainweight">
-            <div class="imgBox">
-              <i class="fa-solid fa-plus"></i>
-              <img
-                src="../images/weightgain.jpg">
+			<!-- Main content -->
+			<div class="content-wrapper">
+				<h1 class="pageHeader">Kost</h1>
+				<div class="boxWrapper">
+					<div class="box" data-panel="panel-loseweight">
+						<div class="imgBox">
+							<i class="fa-solid fa-minus"></i>
+							<img src="../images/weightloss.jpg" />
+						</div>
+						<div class="box-content">
+							<h2>Minska vikt<br /></h2>
+						</div>
+					</div>
+					<div class="box" data-panel="panel-buildmuscle">
+						<div class="imgBox">
+							<i>💪</i>
+							<img src="../images/musclegain.jpg" />
+						</div>
+						<div class="box-content">
+							<h2>Bygga muskler<br /></h2>
+						</div>
+					</div>
+					<div class="box" data-panel="panel-gainweight">
+						<div class="imgBox">
+							<i class="fa-solid fa-plus"></i>
+							<img src="../images/weightgain.jpg" />
+						</div>
+						<div class="box-content">
+							<h2>Öka vikt<br /></h2>
+						</div>
+					</div>
+					<div class="tabs__panels">
+						<div id="panel-loseweight" class="panel">
+							<div class="panel-container">
+								<h1>Minska vikt</h1>
+								<p>
+									<u>Beskrivning:</u><br />
+									För att minska i vikt är det viktigt att skapa en
+									kalorideficit, det vill säga att förbruka mer kalorier än vad
+									man intar. Detta kan uppnås genom en kombination av sund kost
+									och regelbunden träning. Fokusera på att äta näringsrika
+									livsmedel som grönsaker, frukt, magra proteiner och hela
+									kornprodukter. Minska intaget av bearbetade livsmedel, socker
+									och mättade fetter.<br />
+									<u>Viktigt att tänka på:</u><br />
+									En balanserad kost kombinerat med regelbunden fysisk aktivitet
+									är nyckeln till hållbar viktminskning. Undvik alltför strikta
+									dieter som kan vara svåra att upprätthålla långsiktigt.
+								</p>
+							</div>
+						</div>
+						<div id="panel-buildmuscle" class="panel">
+							<div class="panel-container">
+								<h1>Bygga muskler</h1>
+								<p>
+									<u>Beskrivning:</u><br />
+									För att bygga muskelmassa är det viktigt att konsumera
+									tillräckligt med protein, som är byggstenarna i
+									muskeltillväxt, samt att säkerställa en total energiöverskott
+									genom att äta mer kalorier än vad kroppen förbränner. Fokusera
+									på proteinkällor som kyckling, fisk, ägg, mejeriprodukter och
+									vegetariska alternativ. Komplettera med kolhydrater och
+									hälsosamma fetter för att stödja återhämtning och
+									energibehov.<br />
+									<u>Viktigt att tänka på:</u><br />
+									Proteinintag bör kombineras med regelbunden styrketräning för
+									effektiv muskeltillväxt. Undvik tomma kalorier och fokusera på
+									näringsrika livsmedel.
+								</p>
+							</div>
+						</div>
+						<div id="panel-gainweight" class="panel">
+							<div class="panel-container">
+								<h1>Öka vikt</h1>
+								<p>
+									<u>Beskrivning:</u><br />
+									För att öka i vikt på ett hälsosamt sätt, är det viktigt att
+									fokusera på näringsrik mat och att öka kaloriintaget gradvis.
+									Ät måltider med en god balans av proteiner, kolhydrater och
+									fetter. Inkludera kaloritäta livsmedel som nötter, avokado,
+									fullkornsprodukter och fet fisk. Ät regelbundet och överväg
+									att lägga till snacks mellan måltiderna.<br />
+									<u>Viktigt att tänka på:</u><br />
+									Fokus bör ligga på att öka vikten på ett hälsosamt sätt.
+									Undvik att överkonsumera snabbmat och bearbetade livsmedel som
+									kan leda till ohälsosam viktökning.
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
 
-            </div>
-            <div class="box-content">
-              <h2>Öka vikt<br></h2>
-            </div>
-          </div>
-          <div class="tabs__panels">
-          <div id="panel-loseweight" class="panel">
-            <div class="panel-container">
-              <h1>Minska vikt</h1>
-              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nemo
-                sint unde similique distinctio, obcaecati ullam doloremque hic
-                maiores nesciunt laboriosam temporibus officia sequi ex
-                perspiciatis error voluptatibus dolores corrupti placeat!
-                Dolores ullam, odit facilis necessitatibus blanditiis libero
-                recusandae dolorem ipsam atque porro voluptatum eligendi cumque,
-                omnis similique quam quas error culpa obcaecati accusamus
-                reiciendis, consectetur harum quaerat nobis laudantium.
-                Repudiandae odit, in odio veniam natus esse voluptatibus
-                voluptatum enim soluta voluptate modi iste! Alias, eveniet ex!
-                Praesentium, nobis. Rem hic iste sequi accusamus recusandae
-                consequuntur cumque voluptatum modi laudantium possimus fugit
-                vero et tenetur, quos maiores ut necessitatibus temporibus
-                tempore saepe deserunt asperiores? Facere nihil quidem
-                voluptates repellendus dolore nam autem nisi accusantium illum
-                placeat, quaerat laudantium asperiores deleniti dicta rem
-                obcaecati ullam sequi architecto officia culpa beatae, in
-                dolorem? Nostrum placeat consequatur expedita quos facere fuga
-                ipsum dolorem corrupti tempora iste. Facere omnis vel velit
-                quibusdam explicabo praesentium impedit.</p>
-
-            </div>
-          </div>
-          <div id="panel-buildmuscle" class="panel">
-            <div class="panel-container">
-              <h1>Bygga muskler</h1>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa,
-                nihil incidunt. Perferendis earum laudantium tempore vel
-                voluptates vitae quia natus quam, reiciendis, totam dolorem
-                rerum dicta aliquid! Illo deserunt rem ipsam, voluptate beatae
-                soluta ipsum possimus distinctio, vel a eius quaerat, ullam
-                inventore praesentium! Ex nam illum cum eveniet nihil
-                accusantium quia earum perferendis aliquid velit quisquam
-                blanditiis reprehenderit explicabo quos odit quidem eius
-                laudantium, iusto nulla sed perspiciatis autem eum. Blanditiis
-                reiciendis quibusdam totam quos impedit est eius dolor. Ducimus
-                officia non velit modi sit amet voluptatibus facere!
-                Necessitatibus omnis nisi numquam neque dolor esse, in,
-                asperiores deserunt inventore repellendus molestias architecto
-                sunt deleniti labore et suscipit iste optio id itaque odio? At,
-                aspernatur doloribus voluptatibus tempora blanditiis totam
-                perferendis iste aperiam dolore consequuntur cumque ipsam eaque
-                nesciunt pariatur suscipit ullam laborum dolor similique illo.
-                Delectus facilis temporibus dolorum impedit maxime saepe et,
-                numquam animi nostrum molestiae totam dignissimos.</p>
-
-            </div>
-          </div>
-          <div id="panel-gainweight" class="panel">
-            <div class="panel-container">
-              <h1>Öka vikt</h1>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa,
-                nihil incidunt. Perferendis earum laudantium tempore vel
-                voluptates vitae quia natus quam, reiciendis, totam dolorem
-                rerum dicta aliquid! Illo deserunt rem ipsam, voluptate beatae
-                soluta ipsum possimus distinctio, vel a eius quaerat, ullam
-                inventore praesentium! Ex nam illum cum eveniet nihil
-                accusantium quia earum perferendis aliquid velit quisquam
-                blanditiis reprehenderit explicabo quos odit quidem eius
-                laudantium, iusto nulla sed perspiciatis autem eum. Blanditiis
-                reiciendis quibusdam totam quos impedit est eius dolor. Ducimus
-                officia non velit modi sit amet voluptatibus facere!
-                Necessitatibus omnis nisi numquam neque dolor esse, in,
-                asperiores deserunt inventore repellendus molestias architecto
-                sunt deleniti labore et suscipit iste optio id itaque odio? At,
-                aspernatur doloribus voluptatibus tempora blanditiis totam
-                perferendis iste aperiam dolore consequuntur cumque ipsam eaque
-                nesciunt pariatur suscipit ullam laborum dolor similique illo.
-                Delectus facilis temporibus dolorum impedit maxime saepe et,
-                numquam animi nostrum molestiae totam dignissimos.</p>
-            </div>
-          </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <footer>
-      <div class="logo card footer-item">
-        <img src="../images/Dare2DefyLogo.png" alt="Dare2Defy Logo">
-        <h2>Break Limits | Rise Above</h2>
-      </div>
-      <div class="socials card footer-item">
-        <h1>Socials</h1>
-        <ul>
-          <li><a href="#"> <i class="fab fa-instagram"></i>Instagram</a></li>
-          <li><a href="#"> <i class="fab fa-twitter"></i>Twitter</a></li>
-          <li><a href="#"> <i class="fab fa-facebook"></i>Facebook</a></li>
-          <li><a href="#"> <i class="fab fa-linkedin"></i>LinkedIn</a></li>
-        </ul>
-      </div>
-      <div class="about card footer-item">
-        <h1>Om oss</h1>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt
-          laboriosam error vero voluptate doloremque impedit. Minima ab porro
-          velit cum commodi necessitatibus, nostrum vero suscipit maxime ea!
-          Consequatur, voluptatem nulla?
-        </p>
-      </div>
-      <div class="location card footer-item">
-        <h1>Adress</h1>
-        <p>Drottninggatan <br> Stockholm, 11151 <br> daretodefy@email.com</p>
-      </div>
-    </footer>
-    <script src="tabs.js"></script>
-  </body>
+		<footer>
+			<div class="logo card footer-item">
+				<img src="../images/Dare2DefyLogo.png" alt="Dare2Defy Logo" />
+				<h2>Break Limits | Rise Above</h2>
+			</div>
+			<div class="socials card footer-item">
+				<h1>Socials</h1>
+				<ul>
+					<li>
+						<a href="#"> <i class="fab fa-instagram"></i>Instagram</a>
+					</li>
+					<li>
+						<a href="#"> <i class="fab fa-twitter"></i>Twitter</a>
+					</li>
+					<li>
+						<a href="#"> <i class="fab fa-facebook"></i>Facebook</a>
+					</li>
+					<li>
+						<a href="#"> <i class="fab fa-linkedin"></i>LinkedIn</a>
+					</li>
+				</ul>
+			</div>
+			<div class="about card footer-item">
+				<h1>Om oss</h1>
+				<p>
+					Dare2Defy är en plattform skapad för att utmana och hjälpa atleter i
+					deras resa att ta nästa steget inom fysisk och mentalhälsa. Här
+					sammanställs expertis inom träning, kost och psykisk hälsa för att
+					inspirera och vägleda individer mot att bryta gränser och nå nya
+					höjder i sin atletiska och personliga utveckling.
+				</p>
+			</div>
+			<div class="location card footer-item">
+				<h1>Adress</h1>
+				<p>
+					Drottninggatan <br />
+					Stockholm, 11151 <br />
+					daretodefy@email.com
+				</p>
+			</div>
+		</footer>
+		<script src="tabs.js"></script>
+	</body>
 </html>
