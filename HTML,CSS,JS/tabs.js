@@ -1,43 +1,42 @@
-// Wait for the DOM to fully load
+// Väntar på att hela DOMen ska laddas
 document.addEventListener('DOMContentLoaded', () => {
-    // Select all the boxes
-    const boxes = document.querySelectorAll('.box');
-    // Select all the panels
-    const panels = document.querySelectorAll('.panel');
-  
-    // Function to remove 'active' class from all boxes and panels
-    function removeActiveClasses() {
-      boxes.forEach(box => {
-        box.classList.remove('active');
-      });
-      panels.forEach(panel => {
-        panel.classList.remove('active');
-      });
-    }
-  
-    // Function to toggle the 'active' class on boxes and panels
-    function toggleActive(box) {
-      // If the clicked box is already active, deactivate it
-      if (box.classList.contains('active')) {
-        box.classList.remove('active');
-        const panelId = box.dataset.panel;
-        const panel = document.getElementById(panelId);
-        panel.classList.remove('active');
-      } else {
-        // Remove active classes before adding new ones
-        removeActiveClasses();
-        // Activate the clicked box
-        box.classList.add('active');
-        // Activate the corresponding panel
-        const panelId = box.dataset.panel;
-        const panel = document.getElementById(panelId);
-        panel.classList.add('active');
-      }
-    }
-  
-    // Add click event listeners to each box
+  // Väljer alla box-element
+  const boxes = document.querySelectorAll('.box');
+  // Väljer alla panel-element
+  const panels = document.querySelectorAll('.panel');
+
+  // Funktion för att ta bort 'active'-klassen från alla boxar och paneler
+  function removeActiveClasses() {
     boxes.forEach(box => {
-      box.addEventListener('click', () => toggleActive(box));
+      box.classList.remove('active');
     });
+    panels.forEach(panel => {
+      panel.classList.remove('active');
+    });
+  }
+
+  // Funktion för att växla 'active'-klassen på boxar och paneler
+  function toggleActive(box) {
+    // Om boxen som klickades på redan är aktiv, inaktivera den
+    if (box.classList.contains('active')) {
+      box.classList.remove('active');
+      const panelId = box.dataset.panel;
+      const panel = document.getElementById(panelId);
+      panel.classList.remove('active');
+    } else {
+      // Ta bort aktiva klasser innan nya läggs till
+      removeActiveClasses();
+      // Aktivera den klickade boxen
+      box.classList.add('active');
+      // Aktivera motsvarande panel
+      const panelId = box.dataset.panel;
+      const panel = document.getElementById(panelId);
+      panel.classList.add('active');
+    }
+  }
+
+  // Lägger till klick-eventlyssnare för varje box
+  boxes.forEach(box => {
+    box.addEventListener('click', () => toggleActive(box));
   });
-  
+});
